@@ -1,0 +1,1179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F2EFE7">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Daily Things">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta property="og:title" content="Daily Things">
+<meta property="og:description" content="One curious thing, every day. A learning app for children.">
+<style>
+/* Same page shell Claude adds when publishing: keep content clear of the notch and home bar. */
+:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; }
+img { max-width: 100%; }
+</style>
+<title>Daily Things</title>
+<meta name="description" content="One curious thing, every day.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap">
+<style>
+@layer components;
+@layer properties {
+  @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
+  *, ::before, ::after, ::backdrop { --tw-rotate-x: initial; --tw-rotate-y: initial; --tw-rotate-z: initial; --tw-skew-x: initial; --tw-skew-y: initial; --tw-pan-x: initial; --tw-pan-y: initial; --tw-pinch-zoom: initial; --tw-divide-y-reverse: 0; --tw-border-style: solid; --tw-leading: initial; --tw-font-weight: initial; --tw-tracking: initial; --tw-ordinal: initial; --tw-slashed-zero: initial; --tw-numeric-figure: initial; --tw-numeric-spacing: initial; --tw-numeric-fraction: initial; --tw-shadow: 0 0 #0000; --tw-shadow-color: initial; --tw-shadow-alpha: 100%; --tw-inset-shadow: 0 0 #0000; --tw-inset-shadow-color: initial; --tw-inset-shadow-alpha: 100%; --tw-ring-color: initial; --tw-ring-shadow: 0 0 #0000; --tw-inset-ring-color: initial; --tw-inset-ring-shadow: 0 0 #0000; --tw-ring-inset: initial; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-offset-shadow: 0 0 #0000; --tw-blur: initial; --tw-brightness: initial; --tw-contrast: initial; --tw-grayscale: initial; --tw-hue-rotate: initial; --tw-invert: initial; --tw-opacity: initial; --tw-saturate: initial; --tw-sepia: initial; --tw-drop-shadow: initial; --tw-drop-shadow-color: initial; --tw-drop-shadow-alpha: 100%; --tw-drop-shadow-size: initial; --tw-backdrop-blur: initial; --tw-backdrop-brightness: initial; --tw-backdrop-contrast: initial; --tw-backdrop-grayscale: initial; --tw-backdrop-hue-rotate: initial; --tw-backdrop-invert: initial; --tw-backdrop-opacity: initial; --tw-backdrop-saturate: initial; --tw-backdrop-sepia: initial; --tw-translate-x: 0; --tw-translate-y: 0; --tw-translate-z: 0; }
+}
+}
+@layer theme {
+  :root, :host { --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace; --color-white: #fff; --spacing: .25rem; --container-xs: 20rem; --container-sm: 24rem; --container-md: 28rem; --container-lg: 32rem; --text-xs: .75rem; --text-xs--line-height: calc(1 / .75); --text-sm: .875rem; --text-sm--line-height: calc(1.25 / .875); --text-base: 1rem; --text-base--line-height: calc(1.5 / 1); --text-lg: 1.125rem; --text-lg--line-height: calc(1.75 / 1.125); --text-xl: 1.25rem; --text-xl--line-height: calc(1.75 / 1.25); --text-2xl: 1.5rem; --text-2xl--line-height: calc(2 / 1.5); --text-3xl: 1.875rem; --text-3xl--line-height: calc(2.25 / 1.875); --font-weight-medium: 500; --font-weight-semibold: 600; --font-weight-bold: 700; --blur-md: 12px; --default-transition-duration: .15s; --default-transition-timing-function: cubic-bezier(.4, 0, .2, 1); --default-font-family: var(--font-sans); --default-mono-font-family: var(--font-mono); }
+}
+@layer base {
+  *, ::after, ::before, ::backdrop { box-sizing: border-box; border: 0px solid; margin: 0px; padding: 0px; }
+  ::file-selector-button { box-sizing: border-box; border: 0px solid; margin: 0px; padding: 0px; }
+  html, :host { text-size-adjust: 100%; tab-size: 4; line-height: 1.5; font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"); font-feature-settings: var(--default-font-feature-settings, normal); font-variation-settings: var(--default-font-variation-settings, normal); -webkit-tap-highlight-color: transparent; }
+  hr { height: 0px; color: inherit; border-top-width: 1px; }
+  abbr:where([title]) { text-decoration: underline dotted; }
+  h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: inherit; }
+  a { color: inherit; text-decoration: inherit; }
+  b, strong { font-weight: bolder; }
+  code, kbd, samp, pre { font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace); font-feature-settings: var(--default-mono-font-feature-settings, normal); font-variation-settings: var(--default-mono-font-variation-settings, normal); font-size: 1em; }
+  small { font-size: 80%; }
+  sub, sup { vertical-align: baseline; font-size: 75%; line-height: 0; position: relative; }
+  sub { bottom: -0.25em; }
+  sup { top: -0.5em; }
+  table { text-indent: 0px; border-color: inherit; border-collapse: collapse; }
+  progress { vertical-align: baseline; }
+  summary { display: list-item; }
+  ol, ul, menu { list-style: none; }
+  img, svg, video, canvas, audio, iframe, embed, object { vertical-align: middle; display: block; }
+  img, video { max-width: 100%; height: auto; }
+  button, input, select, optgroup, textarea { font: inherit; letter-spacing: inherit; color: inherit; opacity: 1; background-color: rgba(0, 0, 0, 0); border-radius: 0px; }
+  ::file-selector-button { font: inherit; letter-spacing: inherit; color: inherit; opacity: 1; background-color: rgba(0, 0, 0, 0); border-radius: 0px; }
+  :where(select:is([multiple], [size])) optgroup { font-weight: bolder; }
+  :where(select:is([multiple], [size])) optgroup option { padding-inline-start: 20px; }
+  ::file-selector-button { margin-inline-end: 4px; }
+  ::placeholder { opacity: 1; }
+  @supports (not ((-webkit-appearance: -apple-pay-button))) or (contain-intrinsic-size: 1px) {
+  ::placeholder { color: currentcolor; }
+  @supports (color: color-mix(in lab, red, red)) {
+  ::placeholder { color: color-mix(currentcolor, transparent); }
+}
+}
+  textarea { resize: vertical; }
+  ::-webkit-search-decoration { appearance: none; }
+  ::-webkit-date-and-time-value { min-height: 1lh; text-align: inherit; }
+  ::-webkit-datetime-edit { display: inline-flex; }
+  ::-webkit-datetime-edit-fields-wrapper { padding: 0px; }
+  ::-webkit-datetime-edit { padding-block: 0px; }
+  ::-webkit-datetime-edit-year-field { padding-block: 0px; }
+  ::-webkit-datetime-edit-month-field { padding-block: 0px; }
+  ::-webkit-datetime-edit-day-field { padding-block: 0px; }
+  ::-webkit-datetime-edit-hour-field { padding-block: 0px; }
+  ::-webkit-datetime-edit-minute-field { padding-block: 0px; }
+  ::-webkit-datetime-edit-second-field { padding-block: 0px; }
+  ::-webkit-datetime-edit-millisecond-field { padding-block: 0px; }
+  ::-webkit-datetime-edit-meridiem-field { padding-block: 0px; }
+  ::-webkit-calendar-picker-indicator { line-height: 1; }
+  button, input:where([type="button"], [type="reset"], [type="submit"]) { appearance: button; }
+  ::file-selector-button { appearance: button; }
+  ::-webkit-inner-spin-button { height: auto; }
+  ::-webkit-outer-spin-button { height: auto; }
+  [hidden]:where(:not([hidden="until-found"])) { display: none !important; }
+}
+@layer utilities {
+  .pointer-events-none { pointer-events: none; }
+  .absolute { position: absolute; }
+  .fixed { position: fixed; }
+  .relative { position: relative; }
+  .inset-0 { inset: calc(var(--spacing) * 0); }
+  .inset-3 { inset: calc(var(--spacing) * 3); }
+  .inset-x-0 { inset-inline: calc(var(--spacing) * 0); }
+  .start { inset-inline-start: var(--spacing); }
+  .top-0 { top: calc(var(--spacing) * 0); }
+  .top-4 { top: calc(var(--spacing) * 4); }
+  .left-4 { left: calc(var(--spacing) * 4); }
+  .container { width: 100%; }
+  @media (min-width: 40rem) {
+  .container { max-width: 40rem; }
+}
+  @media (min-width: 48rem) {
+  .container { max-width: 48rem; }
+}
+  @media (min-width: 64rem) {
+  .container { max-width: 64rem; }
+}
+  @media (min-width: 80rem) {
+  .container { max-width: 80rem; }
+}
+  @media (min-width: 96rem) {
+  .container { max-width: 96rem; }
+}
+  .m-0 { margin: calc(var(--spacing) * 0); }
+  .mx-auto { margin-inline: auto; }
+  .mt-1 { margin-top: calc(var(--spacing) * 1); }
+  .mt-2 { margin-top: calc(var(--spacing) * 2); }
+  .mt-3 { margin-top: calc(var(--spacing) * 3); }
+  .mt-4 { margin-top: calc(var(--spacing) * 4); }
+  .mt-5 { margin-top: calc(var(--spacing) * 5); }
+  .mt-6 { margin-top: calc(var(--spacing) * 6); }
+  .mt-8 { margin-top: calc(var(--spacing) * 8); }
+  .mt-10 { margin-top: calc(var(--spacing) * 10); }
+  .mt-12 { margin-top: calc(var(--spacing) * 12); }
+  .mt-14 { margin-top: calc(var(--spacing) * 14); }
+  .mt-20 { margin-top: calc(var(--spacing) * 20); }
+  .mb-1 { margin-bottom: calc(var(--spacing) * 1); }
+  .block { display: block; }
+  .flex { display: flex; }
+  .grid { display: grid; }
+  .hidden { display: none; }
+  .inline { display: inline; }
+  .aspect-\[0\.95\] { aspect-ratio: 0.95 / 1; }
+  .aspect-\[1\.12\] { aspect-ratio: 1.12 / 1; }
+  .size-4 { width: calc(var(--spacing) * 4); height: calc(var(--spacing) * 4); }
+  .size-8 { width: calc(var(--spacing) * 8); height: calc(var(--spacing) * 8); }
+  .size-9 { width: calc(var(--spacing) * 9); height: calc(var(--spacing) * 9); }
+  .size-10 { width: calc(var(--spacing) * 10); height: calc(var(--spacing) * 10); }
+  .size-12 { width: calc(var(--spacing) * 12); height: calc(var(--spacing) * 12); }
+  .size-28 { width: calc(var(--spacing) * 28); height: calc(var(--spacing) * 28); }
+  .size-full { width: 100%; height: 100%; }
+  .min-h-36 { min-height: calc(var(--spacing) * 36); }
+  .min-h-44 { min-height: calc(var(--spacing) * 44); }
+  .min-h-\[calc\(100dvh-68px\)\] { min-height: calc(100dvh - 68px); }
+  .min-h-dvh { min-height: 100dvh; }
+  .w-10 { width: calc(var(--spacing) * 10); }
+  .w-full { width: 100%; }
+  .max-w-lg { max-width: var(--container-lg); }
+  .max-w-md { max-width: var(--container-md); }
+  .max-w-sm { max-width: var(--container-sm); }
+  .max-w-xs { max-width: var(--container-xs); }
+  .grow { flex-grow: 1; }
+  .transform { transform: var(--tw-rotate-x, ) var(--tw-rotate-y, ) var(--tw-rotate-z, ) var(--tw-skew-x, ) var(--tw-skew-y, ); }
+  .touch-pan-y { --tw-pan-y: pan-y; touch-action: var(--tw-pan-x, ) var(--tw-pan-y, ) var(--tw-pinch-zoom, ); }
+  .grid-cols-2 { grid-template-columns: repeat(2, minmax(0px, 1fr)); }
+  .flex-col { flex-direction: column; }
+  .place-items-center { place-items: center; }
+  .items-center { align-items: center; }
+  .items-end { align-items: flex-end; }
+  .items-start { align-items: flex-start; }
+  .justify-between { justify-content: space-between; }
+  .justify-center { justify-content: center; }
+  .gap-1 { gap: calc(var(--spacing) * 1); }
+  .gap-2 { gap: calc(var(--spacing) * 2); }
+  .gap-3 { gap: calc(var(--spacing) * 3); }
+  :where(.divide-y > :not(:last-child)) { --tw-divide-y-reverse: 0; border-bottom-style: var(--tw-border-style); border-top-style: var(--tw-border-style); border-top-width: calc(1px * var(--tw-divide-y-reverse)); border-bottom-width: calc(1px * calc(1 - var(--tw-divide-y-reverse))); }
+  :where(.divide-\[\#A9BBC1\]\/45 > :not(:last-child)) { border-color: oklab(0.780122 -0.0166282 -0.0138288 / 0.45); }
+  .overflow-hidden { overflow: hidden; }
+  .rounded-\[26px\] { border-radius: 26px; }
+  .rounded-\[28px\] { border-radius: 28px; }
+  .rounded-\[34px\] { border-radius: 34px; }
+  .rounded-full { border-radius: 3.40282e+38px; }
+  .border { border-style: var(--tw-border-style); border-width: 1px; }
+  .border-t { border-top-style: var(--tw-border-style); border-top-width: 1px; }
+  .border-\[\#0A5270\]\/10 { border-color: oklab(0.413309 -0.0488948 -0.0648836 / 0.1); }
+  .border-\[\#0A5270\]\/25 { border-color: oklab(0.413309 -0.0488948 -0.0648836 / 0.25); }
+  .border-\[\#0A5270\]\/35 { border-color: oklab(0.413309 -0.0488948 -0.0648836 / 0.35); }
+  .border-\[\#153744\]\/10 { border-color: oklab(0.317913 -0.0315463 -0.0327429 / 0.1); }
+  .border-\[\#153744\]\/15 { border-color: oklab(0.317913 -0.0315463 -0.0327429 / 0.15); }
+  .border-\[\#A9BBC1\]\/65 { border-color: oklab(0.780122 -0.0166282 -0.0138288 / 0.65); }
+  .border-white\/30 { border-color: rgba(255, 255, 255, 0.3); }
+  @supports (color: color-mix(in lab, red, red)) {
+  .border-white\/30 { border-color: color-mix(in oklab, var(--color-white) 30%, transparent); }
+}
+  .border-white\/50 { border-color: rgba(255, 255, 255, 0.5); }
+  @supports (color: color-mix(in lab, red, red)) {
+  .border-white\/50 { border-color: color-mix(in oklab, var(--color-white) 50%, transparent); }
+}
+  .bg-\[\#075C7D\] { background-color: rgb(7, 92, 125); }
+  .bg-\[\#CADDE5\] { background-color: rgb(202, 221, 229); }
+  .bg-\[\#CFE1D7\] { background-color: rgb(207, 225, 215); }
+  .bg-\[\#D9D4E7\] { background-color: rgb(217, 212, 231); }
+  .bg-\[\#E4E9E3\] { background-color: rgb(228, 233, 227); }
+  .bg-\[\#E6EBE9\] { background-color: rgb(230, 235, 233); }
+  .bg-\[\#E7D9C8\] { background-color: rgb(231, 217, 200); }
+  .bg-\[\#F2EFE7\] { background-color: rgb(242, 239, 231); }
+  .bg-\[\#F7F6F1\] { background-color: rgb(247, 246, 241); }
+  .bg-\[\#F7F6F1\]\/88 { background-color: oklab(0.972529 -0.000857621 0.00664669 / 0.88); }
+  .bg-white\/55 { background-color: rgba(255, 255, 255, 0.55); }
+  @supports (color: color-mix(in lab, red, red)) {
+  .bg-white\/55 { background-color: color-mix(in oklab, var(--color-white) 55%, transparent); }
+}
+  .object-cover { object-fit: cover; }
+  .p-5 { padding: calc(var(--spacing) * 5); }
+  .p-6 { padding: calc(var(--spacing) * 6); }
+  .px-3 { padding-inline: calc(var(--spacing) * 3); }
+  .px-5 { padding-inline: calc(var(--spacing) * 5); }
+  .px-6 { padding-inline: calc(var(--spacing) * 6); }
+  .py-2 { padding-block: calc(var(--spacing) * 2); }
+  .py-4 { padding-block: calc(var(--spacing) * 4); }
+  .pt-5 { padding-top: calc(var(--spacing) * 5); }
+  .pt-7 { padding-top: calc(var(--spacing) * 7); }
+  .pb-2 { padding-bottom: calc(var(--spacing) * 2); }
+  .pb-10 { padding-bottom: calc(var(--spacing) * 10); }
+  .pb-12 { padding-bottom: calc(var(--spacing) * 12); }
+  .text-center { text-align: center; }
+  .text-left { text-align: left; }
+  .text-right { text-align: right; }
+  .text-2xl { font-size: var(--text-2xl); line-height: var(--tw-leading, var(--text-2xl--line-height)); }
+  .text-3xl { font-size: var(--text-3xl); line-height: var(--tw-leading, var(--text-3xl--line-height)); }
+  .text-base { font-size: var(--text-base); line-height: var(--tw-leading, var(--text-base--line-height)); }
+  .text-lg { font-size: var(--text-lg); line-height: var(--tw-leading, var(--text-lg--line-height)); }
+  .text-sm { font-size: var(--text-sm); line-height: var(--tw-leading, var(--text-sm--line-height)); }
+  .text-xl { font-size: var(--text-xl); line-height: var(--tw-leading, var(--text-xl--line-height)); }
+  .text-xs { font-size: var(--text-xs); line-height: var(--tw-leading, var(--text-xs--line-height)); }
+  .text-\[10px\] { font-size: 10px; }
+  .text-\[11px\] { font-size: 11px; }
+  .text-\[15px\] { font-size: 15px; }
+  .text-\[38px\] { font-size: 38px; }
+  .text-\[42px\] { font-size: 42px; }
+  .leading-6 { --tw-leading: calc(var(--spacing) * 6); line-height: calc(var(--spacing) * 6); }
+  .leading-\[0\.92\] { --tw-leading: .92; line-height: 0.92; }
+  .leading-\[0\.95\] { --tw-leading: .95; line-height: 0.95; }
+  .leading-\[1\.45\] { --tw-leading: 1.45; line-height: 1.45; }
+  .leading-none { --tw-leading: 1; line-height: 1; }
+  .font-bold { --tw-font-weight: var(--font-weight-bold); font-weight: var(--font-weight-bold); }
+  .font-medium { --tw-font-weight: var(--font-weight-medium); font-weight: var(--font-weight-medium); }
+  .font-semibold { --tw-font-weight: var(--font-weight-semibold); font-weight: var(--font-weight-semibold); }
+  .tracking-\[-0\.03em\] { --tw-tracking: -.03em; letter-spacing: -0.03em; }
+  .tracking-\[-0\.025em\] { --tw-tracking: -.025em; letter-spacing: -0.025em; }
+  .tracking-\[-0\.035em\] { --tw-tracking: -.035em; letter-spacing: -0.035em; }
+  .tracking-\[-0\.045em\] { --tw-tracking: -.045em; letter-spacing: -0.045em; }
+  .tracking-\[0\.08em\] { --tw-tracking: .08em; letter-spacing: 0.08em; }
+  .tracking-\[0\.16em\] { --tw-tracking: .16em; letter-spacing: 0.16em; }
+  .tracking-\[0\.18em\] { --tw-tracking: .18em; letter-spacing: 0.18em; }
+  .tracking-\[0\.25em\] { --tw-tracking: .25em; letter-spacing: 0.25em; }
+  .text-\[\#0A6C91\] { color: rgb(10, 108, 145); }
+  .text-\[\#0A5270\] { color: rgb(10, 82, 112); }
+  .text-\[\#4D5A5F\] { color: rgb(77, 90, 95); }
+  .text-\[\#294A57\] { color: rgb(41, 74, 87); }
+  .text-\[\#0879AA\] { color: rgb(8, 121, 170); }
+  .text-\[\#38474D\] { color: rgb(56, 71, 77); }
+  .text-\[\#55717B\] { color: rgb(85, 113, 123); }
+  .text-\[\#61747B\] { color: rgb(97, 116, 123); }
+  .text-\[\#67808A\] { color: rgb(103, 128, 138); }
+  .text-\[\#78909A\] { color: rgb(120, 144, 154); }
+  .text-\[\#153744\] { color: rgb(21, 55, 68); }
+  .text-\[\#587079\] { color: rgb(88, 112, 121); }
+  .text-\[\#617780\] { color: rgb(97, 119, 128); }
+  .text-white { color: var(--color-white); }
+  .text-white\/65 { color: rgba(255, 255, 255, 0.65); }
+  @supports (color: color-mix(in lab, red, red)) {
+  .text-white\/65 { color: color-mix(in oklab, var(--color-white) 65%, transparent); }
+}
+  .uppercase { text-transform: uppercase; }
+  .tabular-nums { --tw-numeric-spacing: tabular-nums; font-variant-numeric: var(--tw-ordinal, ) var(--tw-slashed-zero, ) var(--tw-numeric-figure, ) var(--tw-numeric-spacing, ) var(--tw-numeric-fraction, ); }
+  .shadow-\[0_18px_45px_rgba\(7\,92\,125\,0\.16\)\] { --tw-shadow: 0 18px 45px var(--tw-shadow-color, #075c7d29); box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); }
+  .ring-1 { --tw-ring-shadow: var(--tw-ring-inset, ) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor); box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); }
+  .ring-\[\#153744\]\/5 { --tw-ring-color: oklab(31.7913% -.0315463 -.0327429 / .05); }
+  .filter { filter: var(--tw-blur, ) var(--tw-brightness, ) var(--tw-contrast, ) var(--tw-grayscale, ) var(--tw-hue-rotate, ) var(--tw-invert, ) var(--tw-saturate, ) var(--tw-sepia, ) var(--tw-drop-shadow, ); }
+  .backdrop-blur-md { --tw-backdrop-blur: blur(var(--blur-md)); backdrop-filter: var(--tw-backdrop-blur, ) var(--tw-backdrop-brightness, ) var(--tw-backdrop-contrast, ) var(--tw-backdrop-grayscale, ) var(--tw-backdrop-hue-rotate, ) var(--tw-backdrop-invert, ) var(--tw-backdrop-opacity, ) var(--tw-backdrop-saturate, ) var(--tw-backdrop-sepia, ); }
+  .transition { transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events; transition-timing-function: var(--tw-ease, var(--default-transition-timing-function)); transition-duration: var(--tw-duration, var(--default-transition-duration)); }
+  .transition-colors { transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to; transition-timing-function: var(--tw-ease, var(--default-transition-timing-function)); transition-duration: var(--tw-duration, var(--default-transition-duration)); }
+  .transition-transform { transition-property: transform, translate, scale, rotate; transition-timing-function: var(--tw-ease, var(--default-transition-timing-function)); transition-duration: var(--tw-duration, var(--default-transition-duration)); }
+  .ring-inset { --tw-ring-inset: inset; }
+  @media (hover: hover) {
+  .group-hover\:translate-x-1:is(:where(.group):hover *) { --tw-translate-x: calc(var(--spacing) * 1); translate: var(--tw-translate-x) var(--tw-translate-y); }
+  .group-hover\:rotate-45:is(:where(.group):hover *) { rotate: 45deg; }
+  .hover\:bg-\[\#153744\]\/5:hover { background-color: oklab(0.317913 -0.0315463 -0.0327429 / 0.05); }
+}
+  .active\:scale-\[0\.98\]:active { scale: 0.98; }
+}
+:root { color: rgb(21, 55, 68); font-synthesis: none; text-rendering: optimizelegibility; background: rgb(242, 239, 231); font-family: "Inter Tight", sans-serif; }
+* { box-sizing: border-box; }
+html, body, #root { min-height: 100%; margin: 0px; }
+body { min-width: 320px; }
+button { font: inherit; cursor: pointer; }
+@keyframes splash-in { 
+  0% { opacity: 0; transform: scale(0.96); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes screen-in { 
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+.splash-enter > div, .splash-enter > p { animation: 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0s 1 normal both running splash-in; }
+.splash-enter > p { animation-delay: 0.12s; }
+.screen-enter { animation: 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0s 1 normal both running screen-in; }
+@keyframes fact-enter-right { 
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0px); }
+}
+@keyframes fact-enter-left { 
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0px); }
+}
+@keyframes fact-exit-left { 
+  100% { transform: translateX(-100%); }
+}
+@keyframes fact-exit-right { 
+  100% { transform: translateX(100%); }
+}
+.fact-enter-right { animation: 0.42s cubic-bezier(0.22, 1, 0.36, 1) 0s 1 normal both running fact-enter-right; }
+.fact-enter-left { animation: 0.42s cubic-bezier(0.22, 1, 0.36, 1) 0s 1 normal both running fact-enter-left; }
+.fact-exit-left { animation: 0.42s cubic-bezier(0.22, 1, 0.36, 1) 0s 1 normal both running fact-exit-left; }
+.fact-exit-right { animation: 0.42s cubic-bezier(0.22, 1, 0.36, 1) 0s 1 normal both running fact-exit-right; }
+@media (min-width: 520px) {
+  #root { background: rgb(217, 222, 219); }
+  main { box-shadow: rgba(21, 55, 68, 0.12) 0px 24px 80px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+}
+@property --tw-rotate-x { syntax: "*"; inherits: false; }
+@property --tw-rotate-y { syntax: "*"; inherits: false; }
+@property --tw-rotate-z { syntax: "*"; inherits: false; }
+@property --tw-skew-x { syntax: "*"; inherits: false; }
+@property --tw-skew-y { syntax: "*"; inherits: false; }
+@property --tw-pan-x { syntax: "*"; inherits: false; }
+@property --tw-pan-y { syntax: "*"; inherits: false; }
+@property --tw-pinch-zoom { syntax: "*"; inherits: false; }
+@property --tw-divide-y-reverse { syntax: "*"; inherits: false; initial-value: 0; }
+@property --tw-border-style { syntax: "*"; inherits: false; initial-value: solid; }
+@property --tw-leading { syntax: "*"; inherits: false; }
+@property --tw-font-weight { syntax: "*"; inherits: false; }
+@property --tw-tracking { syntax: "*"; inherits: false; }
+@property --tw-ordinal { syntax: "*"; inherits: false; }
+@property --tw-slashed-zero { syntax: "*"; inherits: false; }
+@property --tw-numeric-figure { syntax: "*"; inherits: false; }
+@property --tw-numeric-spacing { syntax: "*"; inherits: false; }
+@property --tw-numeric-fraction { syntax: "*"; inherits: false; }
+@property --tw-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }
+@property --tw-shadow-color { syntax: "*"; inherits: false; }
+@property --tw-shadow-alpha { syntax: "<percentage>"; inherits: false; initial-value: 100%; }
+@property --tw-inset-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }
+@property --tw-inset-shadow-color { syntax: "*"; inherits: false; }
+@property --tw-inset-shadow-alpha { syntax: "<percentage>"; inherits: false; initial-value: 100%; }
+@property --tw-ring-color { syntax: "*"; inherits: false; }
+@property --tw-ring-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }
+@property --tw-inset-ring-color { syntax: "*"; inherits: false; }
+@property --tw-inset-ring-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }
+@property --tw-ring-inset { syntax: "*"; inherits: false; }
+@property --tw-ring-offset-width { syntax: "<length>"; inherits: false; initial-value: 0; }
+@property --tw-ring-offset-color { syntax: "*"; inherits: false; initial-value: #fff; }
+@property --tw-ring-offset-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0000; }
+@property --tw-blur { syntax: "*"; inherits: false; }
+@property --tw-brightness { syntax: "*"; inherits: false; }
+@property --tw-contrast { syntax: "*"; inherits: false; }
+@property --tw-grayscale { syntax: "*"; inherits: false; }
+@property --tw-hue-rotate { syntax: "*"; inherits: false; }
+@property --tw-invert { syntax: "*"; inherits: false; }
+@property --tw-opacity { syntax: "*"; inherits: false; }
+@property --tw-saturate { syntax: "*"; inherits: false; }
+@property --tw-sepia { syntax: "*"; inherits: false; }
+@property --tw-drop-shadow { syntax: "*"; inherits: false; }
+@property --tw-drop-shadow-color { syntax: "*"; inherits: false; }
+@property --tw-drop-shadow-alpha { syntax: "<percentage>"; inherits: false; initial-value: 100%; }
+@property --tw-drop-shadow-size { syntax: "*"; inherits: false; }
+@property --tw-backdrop-blur { syntax: "*"; inherits: false; }
+@property --tw-backdrop-brightness { syntax: "*"; inherits: false; }
+@property --tw-backdrop-contrast { syntax: "*"; inherits: false; }
+@property --tw-backdrop-grayscale { syntax: "*"; inherits: false; }
+@property --tw-backdrop-hue-rotate { syntax: "*"; inherits: false; }
+@property --tw-backdrop-invert { syntax: "*"; inherits: false; }
+@property --tw-backdrop-opacity { syntax: "*"; inherits: false; }
+@property --tw-backdrop-saturate { syntax: "*"; inherits: false; }
+@property --tw-backdrop-sepia { syntax: "*"; inherits: false; }
+@property --tw-translate-x { syntax: "*"; inherits: false; initial-value: 0; }
+@property --tw-translate-y { syntax: "*"; inherits: false; initial-value: 0; }
+@property --tw-translate-z { syntax: "*"; inherits: false; initial-value: 0; }
+</style>
+<style>
+/* The design is the prototype's own light look; these rules only add what the fixes need. */
+:root { color-scheme: light; }
+html, body { background: var(--screen-bg, #F2EFE7); }
+body { font-family: "Inter Tight", ui-sans-serif, system-ui, sans-serif; }
+.screen { position: relative; }
+/* A band behind the phone's status bar, so content scrolling under it stays hidden. */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--screen-bg, #F2EFE7); }
+#root { background: var(--screen-bg, #F2EFE7); }
+[hidden] { display: none !important; }
+/* The page shell already pads for the phone's notch, so screens fill what is left. */
+.min-h-dvh { min-height: calc(100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)); }
+.min-h-\[calc\(100dvh-68px\)\] { min-height: 0; }
+
+/* Detail screen: keep Back and the counter in reach while scrolling. */
+.dt-head { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: #F7F6F1; }
+/* overflow:hidden on the screen would stop the bar sticking; clip keeps the swipe tidy without that. */
+#detail { overflow: visible; overflow-x: clip; }
+.round-btn { width: 44px; height: 44px; }
+
+/* Larger reading sizes for children; same faces, colours and spacing as the prototype. */
+.kid-desc { font-size: 17px !important; line-height: 1.5 !important; }
+.kid-dd { font-size: 16px !important; line-height: 1.55 !important; }
+
+/* Listen button sits on the photo, styled like the prototype's "Everyday object" chip. */
+.listen {
+  position: absolute; right: 16px; top: 12px; display: grid; place-items: center;
+  width: 44px; height: 44px; border-radius: 9999px; color: #0A6C91;
+  background: color-mix(in srgb, #F7F6F1 88%, transparent); backdrop-filter: blur(12px);
+}
+.listen svg { width: 22px; height: 22px; }
+.listen[aria-pressed="true"] { background: #075C7D; color: #fff; }
+.reading { background: color-mix(in srgb, #0A6C91 10%, transparent); border-radius: 10px; }
+
+/* Previous / next, for children who do not know to swipe. */
+.pager { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.dots { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; min-width: 0; }
+.dots i { width: 7px; height: 7px; border-radius: 9999px; background: color-mix(in srgb, #153744 18%, transparent); }
+.dots i.on { width: 20px; background: #0A6C91; }
+.next-card { width: 100%; }
+.next-thumb { width: 76px; height: 76px; flex: none; border-radius: 20px; object-fit: cover; background: #fff; box-shadow: 0 0 0 1px rgba(21, 55, 68, .06), 0 6px 16px rgba(21, 55, 68, .10); }
+
+/* Drawn arrows replace the text glyphs, so they sit centred and crisp at any size. */
+.ico { display: block; width: 20px; height: 20px; }
+.snake { display: block; overflow: visible; }
+.next-card .snake { display: inline-block; vertical-align: -3px; }
+/* The body ripples forward one full wave while the snake slides off in its direction. */
+.slithering .snake-body { animation: snake-wave .3s linear; }
+.slithering .snake-right { animation: snake-go-right .3s cubic-bezier(.5, 0, .75, 0) forwards; }
+.slithering .snake-left { animation: snake-go-left .3s cubic-bezier(.5, 0, .75, 0) forwards; }
+@keyframes snake-wave { to { transform: translateX(10px); } }
+@keyframes snake-go-right { 35% { transform: translateX(3px); } 100% { transform: translateX(16px); opacity: 0; } }
+@keyframes snake-go-left { 35% { transform: translateX(-3px); } 100% { transform: translateX(-16px); opacity: 0; } }
+.spacer-44 { width: 44px; flex: none; }
+.dice-ico, .groups-ico { display: block; flex: none; transition: transform .35s cubic-bezier(0.22, 1, 0.36, 1); }
+button:hover .dice-ico, button:active .dice-ico { transform: rotate(-16deg) scale(1.06); }
+button:hover .groups-ico, button:active .groups-ico { transform: scale(1.06); }
+
+/* Subject tiles: three real objects from the subject instead of an abstract symbol. */
+/* Subject tiles: one clear photo across the top, the name in a deeper shade of the tile's own colour. */
+.subject-tile { display: flex; flex-direction: column; gap: 12px; padding: 10px 10px 16px; border-radius: 26px; text-align: left; }
+.subject-photo { display: block; width: 100%; aspect-ratio: 4 / 3; border-radius: 18px; object-fit: cover; background: rgba(255, 255, 255, .5); box-shadow: 0 0 0 1px rgba(21, 55, 68, .06); transition: transform .35s cubic-bezier(0.22, 1, 0.36, 1); }
+.subject-tile:hover .subject-photo, .subject-tile:active .subject-photo { transform: scale(1.03); }
+.subject-text { padding: 0 6px; }
+.subject-name { display: block; font-size: 21px; font-weight: 700; letter-spacing: -0.025em; line-height: 1.1; color: var(--ink); }
+.tile-hint { display: block; margin-top: 4px; font-size: 13px; line-height: 1.3; color: #455C66; }
+.tile-count { display: block; margin-top: 6px; font-size: 12px; font-weight: 600; color: var(--ink); }
+/* Home: the Subject card is sunflower yellow (the logo's sparkle), pairing with the teal Random card. */
+.subject-card { background: #FFCF5A; box-shadow: 0 18px 45px rgba(201, 140, 0, .18); }
+.subject-home-title { color: #153744; }
+
+/* ---------- Website layout on computers (900 px and wider). Phones keep the original design. ---------- */
+.site-nav, .key-hint { display: none; }
+@media (min-width: 900px) {
+  .site-nav { display: block; position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: rgba(242, 239, 231, .92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(21, 55, 68, .08); }
+  .site-nav-in { max-width: 1120px; margin: 0 auto; padding: 14px 40px; display: flex; align-items: center; gap: 24px; }
+  .nav-brand { display: flex; align-items: center; gap: 8px; }
+  .nav-links { display: flex; gap: 4px; margin-left: auto; }
+  .nav-link { padding: 10px 18px; border-radius: 9999px; font-size: 15px; font-weight: 600; color: #153744; transition: background-color .2s; }
+  .nav-link:hover { background: rgba(21, 55, 68, .07); }
+  .nav-link.on { background: #153744; color: #fff; }
+  .key-hint { display: block; }
+  .swipe-hint, .home-head { display: none !important; }
+  .screen-head [aria-label="Daily Things"] { visibility: hidden; }
+  main.page { max-width: 1120px; margin: 0 auto; padding-left: 40px; padding-right: 40px; }
+  /* The prototype paints a grey box behind the app on wide screens; a website fills the page instead. */
+  #root, main.page, #detail { background: transparent; box-shadow: none; }
+  /* Back button sits on the left with the content; the stars live in the top bar. */
+  .screen-head { max-width: none; }
+  .screen-head .star-chip { display: none; }
+  /* Home: a big welcome and the three cards side by side */
+  .home-hero { max-width: none; margin-top: 64px; }
+  .home-hero h1 { font-size: 72px; max-width: 12ch; }
+  .home-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 56px; }
+  .home-cards > button { min-height: 280px; padding: 28px; }
+  /* Subjects: four in a row */
+  .subjects-wrap { max-width: none; margin-top: 40px; }
+  .subjects-wrap h1 { font-size: 60px; }
+  .subjects-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+  .subject-tile { padding: 12px 12px 20px; }
+  .subject-name { font-size: 24px; }
+  /* Object page: photo on the left (stays in view), words on the right */
+  #detail { max-width: 1120px; padding: 0 40px; }
+  #detail .dt-head { top: calc(env(safe-area-inset-top, 0px) + 69px); padding-left: 0; padding-right: 0; background: #F7F6F1; }
+  #detail article { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); column-gap: 64px; align-items: start; padding: 0 0 72px; }
+  #detail article > * { grid-column: 2; max-width: none; margin-left: 0; margin-right: 0; }
+  #detail article > div:first-child { grid-column: 1; grid-row: 1 / span 10; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 150px); margin-top: 12px; }
+  #detail article > section:nth-of-type(1) { text-align: left; margin-top: 12px; }
+  #detail article h1 { font-size: 60px; }
+  /* Game: the mystery photo on the left, the answers on the right */
+  .game-wrap { max-width: none; margin-top: 40px; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); column-gap: 64px; align-items: start;
+    grid-template-areas: "pic label" "pic title" "pic feedback" "pic options" "pic after" "pic rest"; grid-template-rows: auto auto auto auto auto 1fr; }
+  .game-wrap > .mystery-label { grid-area: label; }
+  .game-wrap > h1 { grid-area: title; font-size: 60px; }
+  .game-wrap > .mystery { grid-area: pic; margin-top: 0; }
+  .game-wrap > .game-feedback { grid-area: feedback; text-align: left; margin-top: 24px; }
+  .game-wrap > .guess-options { grid-area: options; }
+  .game-wrap > #game-after { grid-area: after; }
+}
+
+/* Stars: the reward a child collects by learning things and solving mysteries. */
+.head-right { display: flex; align-items: center; gap: 8px; }
+.star-chip { display: inline-flex; align-items: center; gap: 4px; padding: 5px 9px 5px 7px; border-radius: 9999px; background: #FFCF5A; color: #153744; font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.star-chip svg { width: 16px; height: 16px; display: block; }
+.star-chip.bump { animation: pop .5s cubic-bezier(.3, 1.6, .5, 1); }
+.sound-btn { width: 36px; height: 36px; flex: none; border-radius: 9999px; display: grid; place-items: center; color: #153744; border: 1px solid rgba(21, 55, 68, .15); }
+.sound-btn svg { width: 18px; height: 18px; }
+.learn-btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 60px; border-radius: 9999px; font-size: 18px; font-weight: 700; background: #FFCF5A; color: #153744; box-shadow: 0 10px 24px rgba(201, 140, 0, .22); transition: transform .15s; }
+.learn-btn:active { transform: scale(.97); }
+.learn-btn svg { width: 24px; height: 24px; flex: none; }
+.learn-btn.done { background: #CFE1D7; color: #266447; box-shadow: none; }
+.pop { animation: pop .5s cubic-bezier(.3, 1.6, .5, 1); }
+@keyframes pop { 30% { transform: scale(.94); } 65% { transform: scale(1.04); } 100% { transform: scale(1); } }
+.confetti { position: absolute; inset: 0; pointer-events: none; z-index: 40; overflow: hidden; }
+.confetti i { position: absolute; width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 3px; animation: burst 1s cubic-bezier(.15, .7, .4, 1) forwards; }
+.confetti i.star { width: 24px; height: 24px; margin: -12px 0 0 -12px; border-radius: 0; }
+.confetti i.star svg { display: block; width: 100%; height: 100%; }
+@keyframes burst { 0% { transform: translate(0, 0) rotate(0) scale(.6); opacity: 1; } 100% { transform: translate(var(--dx), var(--dy)) rotate(var(--r)) scale(1); opacity: 0; } }
+
+/* Home: the mystery game card is coral, beside teal Random and yellow Subject. */
+.game-card { background: #F9B7A6; box-shadow: 0 18px 45px rgba(214, 98, 74, .18); }
+.game-card-label { color: #7E3320; }
+.game-card-sub { color: #5E3326; }
+
+/* Mystery game: a zoomed-in photo that zooms out with each wrong guess. */
+.mystery { position: relative; overflow: hidden; border-radius: 34px; aspect-ratio: 1.12; background: #E6EBE9; }
+.mystery img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.22, 1, .36, 1); }
+.guess-opt { width: 100%; min-height: 58px; border-radius: 20px; background: #fff; border: 2px solid rgba(21, 55, 68, .12); font-size: 19px; font-weight: 600; color: #153744; text-align: left; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; transition: transform .15s, background .2s, border-color .2s; }
+.guess-opt:active { transform: scale(.98); }
+.guess-opt svg { width: 24px; height: 24px; flex: none; }
+.guess-opt.right { background: #CFE1D7; border-color: #5FA882; color: #266447; }
+.guess-opt.wrong { opacity: .45; animation: shake .4s; }
+.guess-opt.center { justify-content: center; }
+@keyframes shake { 20%, 60% { transform: translateX(-6px); } 40%, 80% { transform: translateX(6px); } }
+.game-feedback { min-height: 24px; font-size: 16px; font-weight: 600; color: #8C3B26; text-align: center; }
+.game-feedback.win { color: #266447; font-size: 18px; }
+.mystery-label { color: #A8432C; }
+@media (prefers-reduced-motion: reduce) { .pop, .star-chip.bump, .guess-opt.wrong { animation: none; } .mystery img { transition: none; } }
+.subject-card-label { color: #7A4B00; }
+.subject-card-sub { color: #5A4720; }
+
+button:focus-visible { outline: 3px solid #0A6C91; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  .screen-enter, .splash-enter > div, .splash-enter > p { animation: none !important; }
+}
+</style>
+
+
+</head>
+<body>
+<div class="screen"><div id="root"></div></div>
+
+<script>
+// Daily Things logo: a magnifying glass with a sparkle — "look closer and discover something".
+const LOGO = (size) => `<svg viewBox="0 0 32 32" width="${size}" height="${size}" aria-hidden="true" style="display:block"><circle cx="16" cy="16" r="16" fill="#0A5270"/><circle cx="14" cy="14" r="6.6" fill="none" stroke="#fff" stroke-width="2.4"/><path d="M18.9 18.9 23.4 23.4" stroke="#fff" stroke-width="3" stroke-linecap="round"/><path d="M14 10.4 15.08 12.92 17.6 14 15.08 15.08 14 17.6 12.92 15.08 10.4 14 12.92 12.92Z" fill="#FFC94A"/><circle cx="23.6" cy="8.4" r="1.5" fill="#FFC94A"/></svg>`;
+// Random: a dice, the sign every child knows for "surprise".
+const ICON_DICE = '<svg class="dice-ico" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><g transform="rotate(-12 24 24)"><rect x="8" y="8" width="32" height="32" rx="9" fill="#fff"/><g fill="#075C7D"><circle cx="16.5" cy="16.5" r="3.2"/><circle cx="31.5" cy="16.5" r="3.2"/><circle cx="24" cy="24" r="3.2"/><circle cx="16.5" cy="31.5" r="3.2"/><circle cx="31.5" cy="31.5" r="3.2"/></g></g><path d="M41 3.5 42.6 7.4 46.5 9 42.6 10.6 41 14.5 39.4 10.6 35.5 9 39.4 7.4Z" fill="#FFC94A"/></svg>';
+// Subject: four boxes in the four subject colours — "pick a group".
+const ICON_GROUPS = '<svg class="groups-ico" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><rect x="2" y="2" width="44" height="44" rx="12" fill="#fff"/><rect x="8" y="8" width="15" height="15" rx="5" fill="#5FA882"/><rect x="25" y="8" width="15" height="15" rx="5" fill="#5A9EBB"/><rect x="8" y="25" width="15" height="15" rx="5" fill="#E09A52"/><rect x="25" y="25" width="15" height="15" rx="5" fill="#9783CF"/></svg>';
+// Mystery game: a question mark on a white tile, with the logo's sparkle.
+const ICON_MYSTERY = '<svg class="groups-ico" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><rect x="2" y="2" width="44" height="44" rx="12" fill="#fff"/><path d="M18.5 18.5a5.5 5.5 0 1 1 8.2 4.8c-1.6.9-2.7 2-2.7 3.9v1.3" fill="none" stroke="#D9573F" stroke-width="3.4" stroke-linecap="round"/><circle cx="24" cy="34.6" r="2.2" fill="#D9573F"/><path d="M41 3.5 42.6 7.4 46.5 9 42.6 10.6 41 14.5 39.4 10.6 35.5 9 39.4 7.4Z" fill="#FFC94A"/></svg>';
+const STAR = (fill) => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 16.8 6.2 20l1.4-6.4L2.7 9.2l6.5-.7z" fill="${fill}"/></svg>`;
+const ICON_CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+const ICON_SOUND_ON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5v5h3.5L13 19V5L7.5 9.5z" fill="currentColor"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/></svg>';
+const ICON_SOUND_OFF = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5v5h3.5L13 19V5L7.5 9.5z" fill="currentColor"/><path d="M16.5 9.5l5 5M21.5 9.5l-5 5"/></svg>';
+const ICON_SPEAK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5v5h3.5L13 19V5L7.5 9.5z" fill="currentColor"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>';
+// Arrows are little snakes: a wavy body and an arrow head. Tapping one makes it slither off (see .slithering).
+let snakeCount = 0;
+const SNAKE = (dir, size = 26) => {
+  const id = `snake-clip-${++snakeCount}`;
+  const flip = dir === "left" ? ' transform="matrix(-1 0 0 1 24 0)"' : "";
+  return `<svg class="snake snake-${dir}" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><clipPath id="${id}"><rect x="1" y="3" width="17.4" height="18"/></clipPath></defs><g${flip}><g clip-path="url(#${id})"><path class="snake-body" d="M-8 12q2.5-3.6 5 0t5 0t5 0t5 0t5 0"/></g><path d="M14.6 8.1 20.2 12l-5.6 3.9z" fill="currentColor" stroke-width="1.6"/><circle cx="16.6" cy="11" r="0.95" fill="#fff" stroke="none"/></g></svg>`;
+};
+const ICON_STOP = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2.5" fill="currentColor"/></svg>';
+
+const SUBJECTS = [
+  { name: "Nature", hint: "Plants, fruit and seeds", photo: "sunflower", ink: "#266447", tone: "bg-[#CFE1D7]" },
+  { name: "Science", hint: "How things work", photo: "light-bulb", ink: "#1C5F7A", tone: "bg-[#CADDE5]" },
+  { name: "Culture", hint: "Music, games and art", photo: "crayon", ink: "#8A4F1E", tone: "bg-[#E7D9C8]" },
+  { name: "Human", hint: "Our bodies and homes", photo: "toothbrush", ink: "#5A4796", tone: "bg-[#D9D4E7]" },
+];
+
+// The prototype's 20 objects and photos, with the words rewritten for children.
+const FACTS = [
+  { title: "RUBBER BAND", img: "rubber-band", subject: "Science",
+    description: "A rubber band is a stretchy loop. You can pull it long, and it snaps back to its small shape. People use it to hold things together.",
+    purpose: "Holding things together, like a bunch of pencils.",
+    how: "When you stretch it, it stores energy. Let go, and it pulls back into its loop.",
+    made: "Rubber, which comes from the sap of rubber trees.",
+    origin: "Stephen Perry made the first rubber band in England in 1845.",
+    fun: "The biggest rubber band ball ever made weighs more than a car!" },
+  { title: "TOOTHBRUSH", img: "toothbrush", subject: "Human",
+    description: "A toothbrush is a small brush with soft bristles. It cleans your teeth so they stay strong and healthy.",
+    purpose: "Brushing away bits of food and germs from your teeth.",
+    how: "The bristles scrub your teeth as you move the brush in small circles.",
+    made: "A plastic or bamboo handle with soft nylon bristles.",
+    origin: "Toothbrushes with nylon bristles were first sold in America in 1938.",
+    fun: "Brush for two minutes, twice a day. That is about as long as a song!" },
+  { title: "HANGER", img: "hanger", subject: "Culture",
+    description: "A hanger is shaped like a pair of shoulders. It holds your clothes up in the wardrobe so they stay neat.",
+    purpose: "Keeping clothes tidy and free of creases.",
+    how: "The hook hangs on a rail, and your clothes rest on the hanger’s shoulders.",
+    made: "Wood, metal wire or plastic.",
+    origin: "A shoulder-shaped hanger was invented in America in 1869.",
+    fun: "A famous story says a worker bent the first wire hanger in 1903 because all the coat hooks were full." },
+  { title: "JUICE BOX", img: "juice-box", subject: "Human",
+    description: "A juice box is a small box that holds one drink. It comes with its own little straw.",
+    purpose: "Taking a drink in your lunch box or on a trip.",
+    how: "You push the straw through the little round hole on top, then sip.",
+    made: "Thin card, with layers of plastic and foil inside to keep the juice fresh.",
+    origin: "Drink cartons like this were invented in Sweden in the 1960s.",
+    fun: "Squeeze the box while you sip and the juice comes up faster. Squeeze too hard and it squirts!" },
+  { title: "PENNY", img: "penny", subject: "Culture",
+    description: "A penny is a small coin. In America, one penny is worth one cent, and 100 pennies make a dollar.",
+    purpose: "Paying for things, saving in a piggy bank and learning to count.",
+    how: "Each coin is pressed with pictures on both sides, so everyone knows what it is worth.",
+    made: "Mostly zinc, with a thin coat of copper that makes it look orange-brown.",
+    origin: "The first American pennies were made in 1793.",
+    fun: "Abraham Lincoln’s face has been on the penny for more than 100 years." },
+  { title: "JUMP ROPE", img: "jump-rope", subject: "Human",
+    description: "A jump rope is a long rope with handles. You swing it over your head and jump when it passes under your feet.",
+    purpose: "Playing games and keeping your body strong.",
+    how: "You turn the rope with your wrists and jump at just the right moment.",
+    made: "Plastic, cotton or leather rope, with plastic or wooden handles.",
+    origin: "Children have skipped with ropes for hundreds of years, all around the world.",
+    fun: "Jumping rope makes your heart beat faster, and that helps it grow strong." },
+  { title: "WINDOW", img: "window", subject: "Science",
+    description: "A window is an opening in a wall, filled with clear glass. It lets light in and keeps wind and rain out.",
+    purpose: "Letting sunshine in and letting you see outside.",
+    how: "Light passes straight through clear glass, but air and rain cannot.",
+    made: "Glass, in a frame made of wood, metal or plastic.",
+    origin: "The Romans put glass in windows almost 2,000 years ago.",
+    fun: "Glass is made from sand, heated until it melts like honey!" },
+  { title: "POPCORN", img: "popcorn", subject: "Nature",
+    description: "Popcorn is a corn seed that goes POP when it gets hot. It turns into a fluffy, crunchy snack.",
+    purpose: "A tasty snack, great for movie night.",
+    how: "Each kernel has a tiny drop of water inside. When it heats up, the water turns to steam and the kernel bursts open.",
+    made: "A special kind of corn.",
+    origin: "People in the Americas were popping corn thousands of years ago.",
+    fun: "A popping kernel can jump almost a metre into the air!" },
+  { title: "NOTEBOOK", img: "notebook", subject: "Culture",
+    description: "A notebook is a book full of empty pages. You can write, draw or stick things in it.",
+    purpose: "Writing stories, drawing pictures and keeping notes.",
+    how: "The pages are joined along one side, so you can turn them like a book.",
+    made: "Paper inside, with a card or plastic cover.",
+    origin: "Notebooks grew from old books made of sheets folded and sewn together.",
+    fun: "Paper is made from wood! Trees are mashed into a soft pulp, then pressed flat and dried." },
+  { title: "HANDKERCHIEF", img: "handkerchief", subject: "Human",
+    description: "A handkerchief is a small square of soft cloth. You keep it in your pocket to wipe your nose or hands.",
+    purpose: "Wiping your nose, hands or face.",
+    how: "The soft cloth soaks up water. Then you wash it and use it again.",
+    made: "Cotton or another soft cloth.",
+    origin: "People have carried handkerchiefs for thousands of years.",
+    fun: "You can fold a handkerchief into a bunny, a mouse or even a little hat!" },
+  { title: "TEA BAG", img: "tea-bag", subject: "Nature",
+    description: "A tea bag is a tiny paper bag full of dried tea leaves. Put it in hot water to make a cup of tea.",
+    purpose: "Making tea quickly, without a mess.",
+    how: "Hot water flows through tiny holes in the bag and pulls the flavour and colour out of the leaves.",
+    made: "Thin paper, filled with dried tea leaves.",
+    origin: "Tea bags became popular in the early 1900s, when a tea seller sent tea in little silk bags.",
+    fun: "Watch a tea bag in hot water. The colour swirls out like smoke! Ask a grown-up, because the water is very hot." },
+  { title: "TRUMPET", img: "trumpet", subject: "Culture",
+    description: "A trumpet is a shiny musical instrument. You buzz your lips into it to make loud, bright music.",
+    purpose: "Playing music in bands and orchestras.",
+    how: "Your buzzing lips shake the air inside the long, curled tube. Pressing the three buttons changes the notes.",
+    made: "Brass, a shiny yellow metal.",
+    origin: "People blew horns to send signals thousands of years ago. Trumpets with buttons arrived in the 1800s.",
+    fun: "Unroll a trumpet’s tube and it would be about as long as a grown-up is tall!" },
+  { title: "APPLE", img: "apple", subject: "Nature",
+    description: "An apple is a crunchy, juicy fruit that grows on trees. Apples can be red, green or yellow.",
+    purpose: "A healthy snack. You can bake apples into pies and crumbles too.",
+    how: "Apple trees grow flowers in spring. Each flower can turn into an apple by autumn.",
+    made: "Juicy fruit around a core with small seeds.",
+    origin: "The first apples grew wild in Central Asia, in a country called Kazakhstan.",
+    fun: "There are more than 7,500 kinds of apples in the world!" },
+  { title: "RUBBER DUCK", img: "rubber-duck", subject: "Human",
+    description: "A rubber duck is a yellow bath toy. It floats on the water, and some even squeak!",
+    purpose: "Making bath time fun.",
+    how: "It is hollow and full of air, so it is lighter than water and floats.",
+    made: "Soft plastic called vinyl, or rubber.",
+    origin: "Rubber bath toys were first made in the late 1800s.",
+    fun: "In 1992, thousands of bath toys fell off a ship. Some floated across the ocean for years!" },
+  { title: "MIRROR", img: "mirror", subject: "Science",
+    description: "A mirror is smooth, shiny glass that shows your reflection. When you look in it, you see yourself!",
+    purpose: "Seeing yourself, brushing your hair and decorating rooms.",
+    how: "Light bounces off the shiny back of the mirror and straight back into your eyes.",
+    made: "Glass, with a thin layer of shiny metal on the back.",
+    origin: "The first mirrors were polished black stones, about 8,000 years ago.",
+    fun: "Raise your right hand in front of a mirror. Your reflection raises its left!" },
+  { title: "STOP SIGN", img: "stop-sign", subject: "Culture",
+    description: "A stop sign is a red sign with eight sides. It tells drivers to stop and look before they go.",
+    purpose: "Keeping everyone safe on the road.",
+    how: "Its bright red colour and special shape are easy to spot, even from far away.",
+    made: "Metal, with a coating that shines when car lights hit it.",
+    origin: "The first stop sign was put up in Detroit, America, in 1915.",
+    fun: "A shape with eight sides is called an octagon. Count the sides on the next stop sign you see!" },
+  { title: "DOOR KNOB", img: "door-knob", subject: "Science",
+    description: "A door knob is the round handle on a door. Turn it, and the door opens!",
+    purpose: "Opening and closing doors.",
+    how: "Turning the knob pulls back a little metal bolt called a latch, so the door can swing open.",
+    made: "Metal, glass or wood.",
+    origin: "An inventor called Osbourn Dorsey improved the door lock in 1878.",
+    fun: "Some door knobs have a tiny button in the middle. Push it, and the door locks!" },
+  { title: "BANANA", img: "banana", subject: "Nature",
+    description: "A banana is a long, yellow fruit. Peel off the skin and the soft, sweet fruit is inside.",
+    purpose: "A yummy snack that gives you energy.",
+    how: "Bananas start out green. As they ripen, they turn yellow and get sweeter.",
+    made: "Soft fruit inside a thick peel.",
+    origin: "People first grew bananas in Southeast Asia, thousands of years ago.",
+    fun: "Bananas grow in bunches called hands. Each banana is called a finger!" },
+  { title: "STAPLER", img: "stapler", subject: "Science",
+    description: "A stapler joins sheets of paper together with a small metal clip called a staple.",
+    purpose: "Keeping pages together, like your homework.",
+    how: "Press down and it pushes a staple through the paper, then bends its ends flat at the back.",
+    made: "Metal and plastic.",
+    origin: "The first staplers were made in the 1800s.",
+    fun: "Staples come in a long strip, all stuck together. The stapler snaps off one at a time." },
+  { title: "PINECONE", img: "pinecone", subject: "Nature",
+    description: "A pinecone grows on a pine tree. Its hard, woody scales keep the tree’s seeds safe.",
+    purpose: "Protecting pine seeds until they are ready to grow.",
+    how: "When the weather is dry, the scales open and the seeds fly away on the wind.",
+    made: "Hard, woody scales.",
+    origin: "Pinecones have been around for millions of years, since the time of the dinosaurs!",
+    fun: "Put a closed pinecone somewhere warm and dry, and watch its scales slowly open up!" },
+];
+// New objects (25 per subject), merged in at build time from data/*.json.
+const EXTRA = [{"title": "LEAF", "img": "leaf", "subject": "Nature", "description": "A leaf is the flat, green part of a plant. Leaves grow on stems and branches.", "purpose": "Making food for the plant, using sunlight.", "how": "A leaf catches sunlight and takes in air. It mixes them with water from the roots to make sugary food for the plant.", "made": "Tiny living parts called cells, full of a green colour that catches sunlight.", "origin": "Plants have been growing leaves for millions of years, long before there were any people.", "fun": "In autumn, the green fades away and many leaves turn yellow, orange and red. Then they twirl down to the ground!"}, {"title": "ACORN", "img": "acorn", "subject": "Nature", "description": "An acorn is the nut of an oak tree. It has a smooth shell and a little bumpy cap on top.", "purpose": "Growing a brand-new oak tree, and feeding squirrels, birds and deer.", "how": "If an acorn lands in soft soil, it sends a root down and a tiny shoot up. Slowly, it becomes a tree.", "made": "A hard shell, with a seed full of food for the baby tree inside.", "origin": "Oak trees have been dropping acorns for millions of years.", "fun": "Squirrels bury acorns to eat later, but they forget some. Those can grow into new oak trees!"}, {"title": "SEASHELL", "img": "seashell", "subject": "Nature", "description": "A seashell is the hard outside home of a sea animal, like a snail, clam or mussel. You often find empty ones on the beach.", "purpose": "Keeping the soft animal inside safe from crabs, fish and birds.", "how": "The animal builds its own shell, a little at a time. The shell grows bigger as the animal grows.", "made": "Hard, chalky stuff that the animal makes itself. Chalk is made of the same stuff!", "origin": "Sea animals have been making shells for millions of years.", "fun": "Hold a big shell to your ear and you hear a sound like the sea. It is really the sounds around you, bouncing about inside the shell!"}, {"title": "FEATHER", "img": "feather", "subject": "Nature", "description": "A feather is one of the light, soft pieces that cover a bird’s body. Today, only birds have feathers.", "purpose": "Keeping birds warm and dry, and helping them fly.", "how": "Each feather has a stiff stem down the middle, with lots of tiny branches that hook together like a zip.", "made": "Keratin, the same stuff as your hair and fingernails.", "origin": "Some dinosaurs had feathers too, millions of years ago. Birds are their relatives!", "fun": "Birds comb their feathers with their beaks to keep them neat and clean. This is called preening."}, {"title": "PEBBLE", "img": "pebble", "subject": "Nature", "description": "A pebble is a small, smooth stone. You find lots of them on beaches and in rivers.", "purpose": "Making beaches, river beds and garden paths. Little creatures like to hide under them, too.", "how": "Water and waves roll stones around for a very long time. This rubs off the sharp edges until the stones are smooth.", "made": "Rock, like flint, granite or sandstone.", "origin": "Pebbles are broken bits of big rocks and cliffs, carried away by rivers, waves and ice.", "fun": "A flat pebble can bounce across calm water when you skim it. Ask a grown-up to help you find a safe spot to try!"}, {"title": "SUNFLOWER", "img": "sunflower", "subject": "Nature", "description": "A sunflower is a tall plant with a giant yellow flower. Its big middle is packed with seeds.", "purpose": "Making seeds, which people, birds and squirrels love to eat. The seeds are also squeezed to make cooking oil.", "how": "Young sunflowers turn to follow the sun across the sky each day. When they are fully grown, they stay facing east.", "made": "A thick green stem, big leaves, and a flower head full of seeds.", "origin": "Sunflowers first grew wild in North America. People there have grown them for thousands of years.", "fun": "A sunflower head is really lots and lots of tiny flowers, all squashed together!"}, {"title": "EGG", "img": "egg", "subject": "Nature", "description": "An egg is laid by a mother bird, like a hen. It has a hard shell with a yellow yolk and a clear white inside.", "purpose": "Hens’ eggs are food. We boil, fry and scramble them, and bake them into cakes.", "how": "The hard shell keeps the inside safe. The yolk is full of food, and the white is like a soft cushion around it.", "made": "A shell, a clear egg white and a yellow yolk.", "origin": "People have kept hens for their eggs for thousands of years.", "fun": "An eggshell has thousands of tiny holes, so air can get in and out! Cooking eggs is hot work, so ask a grown-up to help."}, {"title": "HONEY", "img": "honey", "subject": "Nature", "description": "Honey is a sweet, sticky, golden food made by honeybees.", "purpose": "Spreading on toast, stirring into drinks and making food sweet. Honey is not for babies under one year old.", "how": "Bees sip sweet nectar from flowers and carry it to the hive. They store it in little wax cells and fan it with their wings until it turns thick.", "made": "Nectar from flowers, turned into honey by bees.", "origin": "People have collected honey for thousands of years. Very old cave paintings show people gathering it.", "fun": "Bees have to visit lots and lots of flowers to make just one spoonful of honey!"}, {"title": "CARROT", "img": "carrot", "subject": "Nature", "description": "A carrot is a long, orange root that we eat as a vegetable.", "purpose": "Eating! Carrots are crunchy raw and soft when they are cooked.", "how": "The carrot grows under the soil and stores food for the plant. Its feathery green leaves poke up above the ground.", "made": "It is a plant root, full of water and natural sugar.", "origin": "Long ago, carrots were mostly purple or yellow. Orange carrots became popular a few hundred years ago.", "fun": "Carrots are not only orange. They can be purple, yellow, red or white too!"}, {"title": "STRAWBERRY", "img": "strawberry", "subject": "Nature", "description": "A strawberry is a small, red, sweet fruit with tiny seeds on the outside.", "purpose": "Eating fresh, making jam, and putting on top of cakes and ice cream.", "how": "Strawberry plants grow low to the ground. Their white flowers turn into little green berries, which go red and sweet as they ripen.", "made": "Juicy red fruit, dotted all over with little seeds.", "origin": "People have picked small wild strawberries for thousands of years. The big ones we eat today were first grown a few hundred years ago.", "fun": "A strawberry wears its seeds on the outside. Try counting them next time you eat one!"}, {"title": "ORANGE", "img": "orange", "subject": "Nature", "description": "An orange is a round, juicy fruit with a thick orange peel.", "purpose": "Eating in juicy pieces, or squeezing to make orange juice.", "how": "Oranges grow on trees in warm, sunny places. Inside the peel, the fruit is split into segments, full of tiny bags of juice.", "made": "A bumpy peel, soft white pith and juicy segments, sometimes with pips.", "origin": "Oranges first grew in Asia a very long time ago. Travellers carried them all around the world.", "fun": "The fruit came first! The colour orange was named after the fruit."}, {"title": "POTATO", "img": "potato", "subject": "Nature", "description": "A potato is a lumpy vegetable that grows under the ground.", "purpose": "Making chips, mash, roast potatoes and lots of other tasty food.", "how": "A potato plant stores food in round lumps that grow on its stems under the soil. Those lumps are the potatoes we dig up.", "made": "Mostly water and starch, which gives you energy, inside a thin skin.", "origin": "Potatoes first came from South America, where people have grown them for thousands of years.", "fun": "Leave a potato in a dark cupboard and it may grow sprouts, ready to make a new plant!"}, {"title": "TOMATO", "img": "tomato", "subject": "Nature", "description": "A tomato is a round, juicy fruit, usually red. We often eat it like a vegetable.", "purpose": "Salads, sandwiches, soups, and the sauce on pizza and pasta.", "how": "Tomato plants grow little yellow flowers. Each flower can turn into a small green tomato, which turns red as it ripens.", "made": "Juicy flesh, full of little seeds.", "origin": "Tomatoes first came from South and Central America. Now people grow them all over the world.", "fun": "Tomatoes are really fruits, because they have seeds inside. But most people cook them like vegetables!"}, {"title": "COCONUT", "img": "coconut", "subject": "Nature", "description": "A coconut is the big, hard fruit of a coconut palm tree. It is hairy on the outside and white inside.", "purpose": "Eating the white flesh, drinking the coconut water, and making coconut milk and oil.", "how": "Inside the hard shell is a seed. If a coconut lands on a sandy beach, it can sprout and grow into a new palm tree.", "made": "A hairy brown shell, crunchy white flesh, and clear coconut water inside.", "origin": "Coconut palms grow by warm seas. People have used coconuts for thousands of years.", "fun": "Coconuts can float! They can drift across the sea and grow on a faraway beach. Opening one needs strong tools, so ask a grown-up to help."}, {"title": "MUSHROOM", "img": "mushroom", "subject": "Nature", "description": "A mushroom is a fungus, not a plant. It often has a round cap on top of a stalk.", "purpose": "Some mushrooms are good to eat. In the woods, mushrooms help old leaves and wood rot away into soil.", "how": "A mushroom grows from tiny threads hidden in the soil or wood. It lets out tiny dust called spores, which can grow into new mushrooms.", "made": "Soft, spongy stuff. A mushroom has no leaves and no green colour.", "origin": "Mushrooms have grown on Earth for millions of years. People have grown some kinds to eat for hundreds of years.", "fun": "Some mushrooms glow in the dark! But never eat a wild mushroom without a grown-up checking, because some are poisonous."}, {"title": "PUMPKIN", "img": "pumpkin", "subject": "Nature", "description": "A pumpkin is a big, round, orange squash. It grows on a long vine that creeps along the ground.", "purpose": "Making soup and pie, roasting the seeds, and carving into lanterns.", "how": "A pumpkin vine grows big yellow flowers. Bees carry pollen from flower to flower, and some flowers grow into pumpkins.", "made": "A thick orange skin, soft orange flesh, and lots of seeds in the middle.", "origin": "Pumpkins first came from North and Central America, where people have grown them for thousands of years.", "fun": "The biggest pumpkins grow heavier than a small car! Carving one needs a sharp knife, so ask a grown-up to help."}, {"title": "LEMON", "img": "lemon", "subject": "Nature", "description": "A lemon is a yellow fruit with a very sour taste.", "purpose": "Adding a fresh, sour flavour to drinks, cakes and food, and making lemonade.", "how": "Lemons grow on trees in warm places. Their juice is full of a natural acid, which makes it taste sour.", "made": "A bright yellow peel and juicy, sour segments with pips.", "origin": "Lemons first grew in Asia long ago. Travellers carried them all over the world.", "fun": "Write a secret message with lemon juice. When a grown-up gently warms the paper, the writing turns brown and appears! Ask a grown-up to help."}, {"title": "GRAPES", "img": "grapes", "subject": "Nature", "description": "Grapes are small, round, juicy fruits that grow in bunches.", "purpose": "Eating as a snack, drying into raisins, and making juice.", "how": "Grapes grow on climbing plants called vines. Each bunch starts as tiny flowers that turn into little green berries.", "made": "A thin skin, sweet juicy flesh, and sometimes little seeds.", "origin": "People have grown grapes for thousands of years.", "fun": "A raisin is just a grape that has been dried! For little children, grapes should be cut in half, so ask a grown-up to help."}, {"title": "WATERMELON", "img": "watermelon", "subject": "Nature", "description": "A watermelon is a huge, round fruit with a green skin and a juicy red inside.", "purpose": "A cool, sweet snack on a hot day.", "how": "Watermelons grow on vines along the ground. The fruit fills up with lots of water as it grows, so it is very juicy.", "made": "A thick green rind, sweet red flesh, and black seeds.", "origin": "Watermelons first came from Africa, where people have grown them for thousands of years.", "fun": "A watermelon is mostly water. That is how it got its name! Cutting one needs a big knife, so ask a grown-up to help."}, {"title": "PEANUT", "img": "peanut", "subject": "Nature", "description": "A peanut is a small, tasty seed that grows inside a thin, crinkly shell.", "purpose": "Eating as a snack, and making peanut butter.", "how": "After a peanut plant flowers, little stalks push down into the soil. The peanuts grow underground!", "made": "A papery shell, usually with two seeds inside, each in a thin red-brown skin.", "origin": "Peanuts first came from South America, where people have grown them for thousands of years.", "fun": "Peanuts are not really nuts. They are related to peas and beans! Some people are allergic to peanuts, so always ask a grown-up before sharing them."}, {"title": "RICE", "img": "rice", "subject": "Nature", "description": "Rice is the tiny seed of a grassy plant. People all over the world cook and eat it.", "purpose": "Making meals like fried rice, sushi, risotto and rice pudding.", "how": "Rice plants often grow in flooded fields called paddies. The ripe grains are cut, dried and cleaned. Cooking rice uses boiling water, so ask a grown-up to help.", "made": "Each grain is a seed, mostly starch, which gives your body energy.", "origin": "People in Asia have grown rice for thousands of years.", "fun": "More than half the people in the world eat rice as one of their main foods!"}, {"title": "DANDELION", "img": "dandelion", "subject": "Nature", "description": "A dandelion is a small wild plant with a bright yellow flower. Later, the flower turns into a fluffy white ball of seeds.", "purpose": "Feeding bees and butterflies, and spreading its seeds to grow new dandelions.", "how": "Each fluffy seed has its own tiny parachute. When the wind blows, the seeds float away to grow somewhere new.", "made": "Jagged green leaves, a hollow stem, and a flower head made of lots of tiny yellow flowers.", "origin": "Dandelions grow wild in many places around the world. The name comes from French words meaning “lion’s tooth”, because of the jagged leaves.", "fun": "Blow on a fluffy dandelion clock and watch the seeds fly. Some people make a wish as they blow!"}, {"title": "SAND", "img": "sand", "subject": "Nature", "description": "Sand is lots and lots of tiny bits of rock and shell. You find it on beaches and in deserts.", "purpose": "Making beaches and deserts, building sandcastles, and making glass and concrete.", "how": "Over a very long time, wind, waves and rivers break rocks into smaller and smaller pieces, until they are sand.", "made": "Tiny grains of rock, often a hard mineral called quartz, and sometimes bits of shell.", "origin": "Wind, rain and the sea have been making sand for millions of years, and they are still making it today.", "fun": "Most glass is made by melting sand in a super-hot oven. Your window was once sand!"}, {"title": "COTTON", "img": "cotton", "subject": "Nature", "description": "Cotton is the soft, white fluff that grows on a cotton plant. It bursts out of a round pod called a boll.", "purpose": "Spinning into thread, to make T-shirts, socks, towels and lots of other cloth.", "how": "The fluffy fibres grow around the seeds inside the boll. When the boll opens, the fluff is picked, cleaned and spun into thread.", "made": "Soft, white plant fibres.", "origin": "People in different parts of the world have grown cotton and woven it into cloth for thousands of years.", "fun": "Look at the label on your T-shirt. If it says cotton, it grew on a plant!"}, {"title": "AVOCADO", "img": "avocado", "subject": "Nature", "description": "An avocado is a green fruit with creamy flesh and one big seed inside.", "purpose": "Spreading on toast, slicing into salads, and mashing into guacamole.", "how": "Avocados grow on trees. They are picked while they are hard, and only go soft and ripe after they come off the tree.", "made": "A dark green skin, soft, creamy green flesh, and one big round stone.", "origin": "Avocados first came from Mexico and Central America, where people have eaten them for thousands of years.", "fun": "You can try growing a little avocado tree from the big stone! Cutting the fruit needs a sharp knife, so ask a grown-up to help."}, {"title": "MAGNET", "img": "magnet", "subject": "Science", "description": "A magnet is a piece of metal that can pull things made of iron and steel towards it, without even touching them.", "purpose": "Holding notes on the fridge, keeping cupboard doors shut, and working inside compasses, speakers and motors.", "how": "Every magnet has a north end and a south end. Opposite ends pull together, and matching ends push each other away.", "made": "Iron or steel, or special mixes of metals that make very strong magnets.", "origin": "Long ago, people found natural magnetic rocks called lodestones. They used them to make the first compasses.", "fun": "The Earth itself is like a giant magnet! Small magnets must never go in your mouth, so ask a grown-up to help with them."}, {"title": "LIGHT BULB", "img": "light-bulb", "subject": "Science", "description": "A light bulb is a glass bulb that glows brightly when electricity flows into it.", "purpose": "Lighting up rooms, streets and lamps when it is dark.", "how": "In old-style bulbs, a very thin wire gets so hot that it glows. Newer LED bulbs have tiny parts that glow and use much less electricity.", "made": "Glass and metal, with a thin wire or small LED lights inside.", "origin": "Inventors made the first long-lasting light bulbs about 150 years ago.", "fun": "In cartoons, a light bulb over someone's head means they have had a bright idea! Bulbs can get very hot, so ask a grown-up to help change one."}, {"title": "BATTERY", "img": "battery", "subject": "Science", "description": "A battery is a small store of electricity. It powers things like toys, torches and remote controls.", "purpose": "Giving electricity to things that are not plugged into the wall.", "how": "Chemicals inside the battery make electricity flow out of one end, through your toy, and back into the other end.", "made": "A metal case with special chemicals inside.", "origin": "Alessandro Volta made the first battery in Italy over 200 years ago. The word volt comes from his name.", "fun": "Look for the + and − signs. A battery only works when it faces the right way! Never put a battery in your mouth. Ask a grown-up to help change them."}, {"title": "THERMOMETER", "img": "thermometer", "subject": "Science", "description": "A thermometer is a tool that measures how hot or cold something is.", "purpose": "Checking if you have a fever, how warm the weather is, or if food is cooked.", "how": "In some thermometers, a liquid in a thin tube rises when it gets warmer and sinks when it gets colder. Digital ones have a tiny sensor and a screen.", "made": "Glass or plastic, with a coloured liquid or an electronic sensor inside.", "origin": "Thermometers were first made about 400 years ago.", "fun": "A healthy person's body is about 37 degrees Celsius inside. Ask a grown-up to help take your temperature."}, {"title": "MAGNIFYING GLASS", "img": "magnifying-glass", "subject": "Science", "description": "A magnifying glass is a round, curved lens with a handle. It makes small things look much bigger.", "purpose": "Looking closely at tiny things, like bugs, leaves, stamps and small writing.", "how": "The curved lens bends the light coming from an object, so the object looks bigger to your eyes.", "made": "A lens of glass or clear plastic, held in a metal or plastic frame.", "origin": "People have used curved glass to make things look bigger for hundreds of years.", "fun": "Detectives in stories use magnifying glasses to find tiny clues! Never point one at the sun, because it can make a hot spot that burns. Ask a grown-up to help."}, {"title": "UMBRELLA", "img": "umbrella", "subject": "Science", "description": "An umbrella is a folding cover on a stick. You hold it over your head to keep off the rain.", "purpose": "Keeping you dry in the rain, or shading you from the hot sun.", "how": "Thin metal ribs push the cloth open when you slide them up the stick. When you close it, it folds up small.", "made": "Waterproof cloth, thin metal ribs, and a handle of plastic or wood.", "origin": "People in places like ancient China and Egypt used umbrellas thousands of years ago, mostly for shade from the sun.", "fun": "The word umbrella comes from umbra, a Latin word for shadow!"}, {"title": "SCISSORS", "img": "scissors", "subject": "Science", "description": "Scissors are a cutting tool with two blades joined in the middle.", "purpose": "Cutting paper, card, string, cloth and hair.", "how": "When you squeeze the handles, the two sharp edges slide past each other and snip whatever is between them.", "made": "Steel blades, with metal or plastic handles.", "origin": "Scissors are very old. Scissors that cross in the middle, like ours, were used in ancient Rome.", "fun": "Children's scissors have round tips to keep fingers safe. Always carry scissors with the points down, and ask a grown-up to help."}, {"title": "ZIPPER", "img": "zipper", "subject": "Science", "description": "A zipper, or zip, is two rows of little teeth that lock together to close a coat, bag or pencil case.", "purpose": "Opening and closing clothes and bags quickly.", "how": "As you pull the slider up, it pushes the teeth together so they hook onto each other. Pull it down and it wedges them apart.", "made": "Metal or plastic teeth on strips of cloth, with a metal slider.", "origin": "Zips like ours were invented in America in the early 1900s.", "fun": "Look closely at a zip. Many sliders have the letters YKK on them. That is the name of a company that makes huge numbers of zips!"}, {"title": "BALLOON", "img": "balloon", "subject": "Science", "description": "A balloon is a thin, stretchy bag that you fill with air or a gas called helium.", "purpose": "Decorating parties and celebrations, and playing games.", "how": "Blowing air in stretches the rubber bigger and bigger. Helium is lighter than air, so a helium balloon floats up.", "made": "Stretchy rubber, or shiny foil.", "origin": "Rubber balloons were first made about 200 years ago, for science experiments.", "fun": "Rub a balloon on your hair and it can stick to the wall! If a balloon pops, pick up all the pieces, because little children could choke on them."}, {"title": "CLOCK", "img": "clock", "subject": "Science", "description": "A clock is a machine that shows what time it is.", "purpose": "Telling the time, so you know when to wake up, eat lunch or go to bed.", "how": "The short hand points to the hour and the long hand points to the minutes. Inside, a battery or a wound-up spring keeps the hands moving.", "made": "Plastic, metal or wood, with a glass or plastic cover over the face.", "origin": "Long ago, people told the time with sundials. Clocks with gears were first made in Europe about 700 years ago.", "fun": "Clock hands always go round the same way. That is why we call it clockwise!"}, {"title": "COMPASS", "img": "compass", "subject": "Science", "description": "A compass is a tool with a needle that always points north. It helps you find your way.", "purpose": "Finding directions when you are walking, sailing or exploring.", "how": "The needle is a tiny magnet. It swings round to line up with the Earth's magnetism, so one end points north.", "made": "A magnetic needle on a pin, inside a case with a clear lid, marked N, E, S and W.", "origin": "The compass was invented in China, more than a thousand years ago.", "fun": "Going round clockwise from the top, the letters are N, E, S and W. Remember them with: Never Eat Soggy Waffles!"}, {"title": "TORCH", "img": "torch", "subject": "Science", "description": "A torch is a small light that you can carry around. It runs on batteries.", "purpose": "Seeing in the dark, like on a camping trip or during a power cut.", "how": "When you press the switch, the batteries send electricity to a little bulb. A shiny curved mirror behind it makes a bright beam.", "made": "A plastic or metal case, batteries, a bulb or LED, and a clear cover.", "origin": "Battery torches were invented around the year 1900.", "fun": "In America, a torch is called a flashlight! Never shine one into someone's eyes."}, {"title": "BICYCLE", "img": "bicycle", "subject": "Science", "description": "A bicycle, or bike, has two wheels, a seat and pedals. You ride it by pushing the pedals with your feet.", "purpose": "Getting around, having fun and keeping fit.", "how": "The pedals turn a chain, and the chain turns the back wheel. You steer with the handlebars and squeeze the brakes to stop.", "made": "A metal frame, rubber tyres, a chain and pedals.", "origin": "The first bicycles, about 200 years ago, had no pedals. Riders pushed themselves along with their feet!", "fun": "Everyone wobbles when they first learn to ride. Keep practising, and always wear a helmet!"}, {"title": "SPONGE", "img": "sponge", "subject": "Science", "description": "A sponge is a soft, squishy block full of tiny holes. It soaks up water.", "purpose": "Washing dishes, cleaning tables, and washing yourself in the bath.", "how": "The tiny holes fill up with water. When you squeeze the sponge, the water is pushed back out.", "made": "Most kitchen sponges are made of soft foam. Natural sponges come from the sea.", "origin": "The first sponges people used were real sea sponges, which are simple animals that live on the sea floor.", "fun": "A sea sponge is an animal, but it has no brain, no heart and no eyes!"}, {"title": "ICE CUBE", "img": "ice-cube", "subject": "Science", "description": "An ice cube is a small block of frozen water.", "purpose": "Keeping drinks cold and cooling things down.", "how": "In the freezer, the water gets so cold that it turns solid. When it warms up again, it melts back into water.", "made": "Just water, frozen solid.", "origin": "Before fridges, people cut big blocks of ice from frozen lakes and stored them in cold buildings called ice houses.", "fun": "Ice floats! Water gets a little bigger when it freezes, so ice is lighter than the same amount of water."}, {"title": "CANDLE", "img": "candle", "subject": "Science", "description": "A candle is a stick of wax with a string, called a wick, through the middle. When it is lit, it gives a small flame.", "purpose": "Giving soft light, making a room smell nice, and decorating birthday cakes.", "how": "The flame melts the wax. The melted wax climbs up the wick and burns, which keeps the flame going.", "made": "Wax and a cotton wick.", "origin": "People have made candles for thousands of years, from beeswax and animal fat.", "fun": "On your birthday, make a wish and blow out the candles! A flame is very hot, so ask a grown-up to help."}, {"title": "KEY", "img": "key", "subject": "Science", "description": "A key is a small metal tool that opens a lock.", "purpose": "Locking and unlocking doors, cars, boxes and bikes.", "how": "The bumps on the key push little pins inside the lock to just the right height. Then the lock can turn.", "made": "Metal, usually brass or steel.", "origin": "The ancient Egyptians used wooden locks and keys thousands of years ago.", "fun": "Each key's bumpy pattern fits only its own lock, like a secret code!"}, {"title": "PADLOCK", "img": "padlock", "subject": "Science", "description": "A padlock is a lock you can carry around. It has a curved metal bar on top called a shackle.", "purpose": "Locking gates, lockers, sheds, bikes and boxes.", "how": "Push the shackle down and it clicks shut. To open it, turn the key, or line up the right secret numbers.", "made": "Strong steel or brass.", "origin": "People have used padlocks for a very long time. The ancient Romans had them.", "fun": "Some padlocks open with a secret number instead of a key. Don't forget your number!"}, {"title": "PAPER CLIP", "img": "paper-clip", "subject": "Science", "description": "A paper clip is a bent piece of wire that holds sheets of paper together.", "purpose": "Keeping pages together without making holes in them.", "how": "The springy wire loops squeeze the pages tightly between them.", "made": "Steel wire, sometimes covered in coloured plastic.", "origin": "Paper clips with the famous double-loop shape became popular more than a hundred years ago.", "fun": "Paper clips are made of steel, so a magnet can pick up a whole chain of them! They are small, so ask a grown-up to help keep them away from little children."}, {"title": "CALCULATOR", "img": "calculator", "subject": "Science", "description": "A calculator is a small machine that does sums for you.", "purpose": "Adding, taking away, multiplying and dividing numbers quickly.", "how": "You press the number buttons, a tiny electronic chip inside works out the answer, and it shows on the screen.", "made": "A plastic case, buttons, a screen, a tiny chip, and a battery or a small solar panel.", "origin": "Long ago, people counted with an abacus, which has beads on rods. Pocket calculators arrived in the 1970s.", "fun": "Type 0.7734, then turn the calculator upside down. It says hELLO!"}, {"title": "REMOTE CONTROL", "img": "remote-control", "subject": "Science", "description": "A remote control is a small box of buttons. It lets you work the TV from across the room.", "purpose": "Turning the TV on and off, changing channels and the volume, without getting up.", "how": "When you press a button, the front sends out a beam of invisible light carrying a secret code. The TV catches the beam and does what the code says.", "made": "A plastic case, rubber buttons, a little circuit board and batteries.", "origin": "TV remote controls were first made in the 1950s. Some early ones were joined to the TV by a long wire!", "fun": "Point a remote at a phone camera and press a button. On many phones you can see the invisible light flash! Ask a grown-up to help change the batteries."}, {"title": "FRIDGE", "img": "fridge", "subject": "Science", "description": "A fridge is a big, cold cupboard that keeps food and drinks cool and fresh.", "purpose": "Keeping milk, cheese, fruit and leftovers fresh for longer.", "how": "A special liquid flows through pipes, picking up heat from inside the fridge and letting it out at the back. That is why the back feels warm.", "made": "Metal and plastic, with thick walls that keep the cold in.", "origin": "Before fridges, people kept food cold with big blocks of ice. Electric fridges came into homes in the 1900s.", "fun": "Germs grow very slowly in the cold, so food lasts longer. Close the door quickly to keep the cold inside!"}, {"title": "KETTLE", "img": "kettle", "subject": "Science", "description": "A kettle is a pot with a spout and a handle, used for boiling water.", "purpose": "Boiling water for tea, hot chocolate, cooking and washing up.", "how": "An electric kettle has a heating part at the bottom that makes the water hotter and hotter. It switches itself off when the water boils.", "made": "Metal or tough plastic, with a heating part inside.", "origin": "People have boiled water in metal pots over fires for thousands of years. Electric kettles were invented in the late 1800s.", "fun": "Some kettles whistle when the water boils! Boiling water and steam are very hot, so only a grown-up should use a kettle. Ask a grown-up to help."}, {"title": "STRAW", "img": "straw", "subject": "Science", "description": "A straw is a thin tube that you use to sip a drink.", "purpose": "Drinking without tipping the cup.", "how": "When you suck, you take air out of the straw. The air pressing down on your drink pushes it up the straw into your mouth.", "made": "Paper, plastic, metal, glass or bamboo.", "origin": "People have drunk through straws for thousands of years. Paper drinking straws were invented in the 1880s.", "fun": "Some of the first drinking straws were dry, hollow stalks of grass, called straw. That is how straws got their name!"}, {"title": "SCREW", "img": "screw", "subject": "Science", "description": "A screw is a small metal pin with a spiral ridge wrapped around it. It holds things tightly together.", "purpose": "Joining pieces of wood, metal and plastic, in furniture, toys and houses.", "how": "When you turn a screw with a screwdriver, the spiral ridge pulls it deeper and deeper into the wood.", "made": "Steel or brass.", "origin": "The screw is a very old idea. The ancient Greeks used giant screws to lift water.", "fun": "Remember: righty-tighty, lefty-loosey! Screws are small and sharp, so ask a grown-up to help."}, {"title": "DRUM", "img": "drum", "subject": "Culture", "description": "A drum is a musical instrument you hit to make a beat. It has a tight skin stretched over a hollow shape.", "purpose": "Keeping the beat in music, and for dancing, marching and celebrating.", "how": "When you hit the tight skin, it shakes very fast. The hollow body makes the sound big and loud.", "made": "A hollow body of wood or metal, with a skin of plastic or animal hide stretched over the top.", "origin": "Drums are one of the oldest instruments in the world. People have played them for thousands of years.", "fun": "Your heart beats like a little drum. Tap its beat on a table: ba-dum, ba-dum, ba-dum!"}, {"title": "GUITAR", "img": "guitar", "subject": "Culture", "description": "A guitar is a musical instrument with strings. You strum or pluck the strings to make music.", "purpose": "Playing songs on its own or in a band, and singing along.", "how": "Plucking a string makes it shake. The hollow body makes the sound louder, and pressing the strings on the neck changes the note.", "made": "Wood for the body and neck, with strings of metal or nylon.", "origin": "People have played stringed instruments for thousands of years. The guitar we know today grew up in Spain.", "fun": "Most guitars have six strings, but some have twelve!"}, {"title": "PIANO", "img": "piano", "subject": "Culture", "description": "A piano is a big musical instrument with black and white keys. You press the keys to play music.", "purpose": "Playing music, from quiet songs at home to big concerts.", "how": "Each key moves a little felt hammer. The hammer hits a metal string inside, and the string sings out a note.", "made": "Wood, with metal strings, felt hammers and a long row of keys.", "origin": "The piano was invented in Italy about 300 years ago.", "fun": "Most pianos have 88 keys: 52 white ones and 36 black ones. Count them next time you see one!"}, {"title": "VIOLIN", "img": "violin", "subject": "Culture", "description": "A violin is a small wooden instrument with four strings. You hold it under your chin and play it with a bow.", "purpose": "Playing music in orchestras, folk bands and on its own.", "how": "The bow has long hairs stretched along it. When you slide it across the strings, they shake and make a singing sound.", "made": "Carved wood, with four strings, and a bow usually strung with horse hair.", "origin": "Violins were first made in Italy about 500 years ago.", "fun": "Players rub the bow with sticky rosin so it can grip the strings. Without it, a violin hardly makes a sound!"}, {"title": "CRAYON", "img": "crayon", "subject": "Culture", "description": "A crayon is a colourful stick of wax for drawing and colouring.", "purpose": "Drawing pictures and colouring them in.", "how": "When you press a crayon on paper, a little of the soft wax rubs off and leaves colour behind.", "made": "Wax mixed with colour, often wrapped in a paper label.", "origin": "Wax crayons for children became popular more than 100 years ago.", "fun": "Draw on paper with a white crayon, then paint over it with watery paint. Your secret picture appears like magic!"}, {"title": "PENCIL", "img": "pencil", "subject": "Culture", "description": "A pencil is a thin stick for writing and drawing. It has a dark grey middle that leaves marks on paper.", "purpose": "Writing, drawing and doing sums. Mistakes can be rubbed out with a rubber.", "how": "As you press, tiny bits of the soft grey middle rub off onto the paper and make a line.", "made": "Wood on the outside, with graphite and clay in the middle. Many have a rubber on the end.", "origin": "People have made pencils for hundreds of years, ever since a big lump of graphite was found in England.", "fun": "A pencil's 'lead' has no lead in it at all. It is graphite mixed with clay! Sharp pencils are pointy, so ask a grown-up to help with the sharpener."}, {"title": "BOOK", "img": "book", "subject": "Culture", "description": "A book is lots of pages joined together inside a cover. It is full of words, pictures, or both.", "purpose": "Reading stories, learning new things and looking at pictures.", "how": "The pages are joined along one edge, called the spine, so you can turn them one by one.", "made": "Paper pages, glued or sewn together, with a cover of card or cloth.", "origin": "Long ago, people wrote on long rolls called scrolls. Books with pages you can turn have been around for well over 1,000 years.", "fun": "Some big libraries hold millions of books. You could never read them all, but you could try!"}, {"title": "MARBLES", "img": "marbles", "subject": "Culture", "description": "Marbles are small, shiny glass balls, often with swirls of colour inside. Children play games with them.", "purpose": "Playing games, like trying to knock other marbles out of a circle, and collecting them.", "how": "You flick a marble with your thumb so it rolls across the floor. It is round and smooth, so it rolls fast and far.", "made": "Glass, with coloured glass twisted inside to make the swirls.", "origin": "Children have played with little balls of clay and stone for thousands of years. Glass marbles became popular in the 1800s.", "fun": "Each marble's swirls are a little different, so no two look quite the same! Marbles are small enough to swallow, so keep them away from babies and ask a grown-up to help."}, {"title": "STAMP", "img": "postage-stamp", "subject": "Culture", "description": "A stamp is a small sticky picture you put on a letter. It shows that you have paid to send it.", "purpose": "Paying for a letter or parcel to travel by post.", "how": "You stick the stamp in the top corner of the envelope. The post office marks it so it can't be used again.", "made": "Paper, with a picture printed on the front and glue on the back.", "origin": "The first sticky postage stamp was made in Britain in 1840. It was called the Penny Black.", "fun": "Some people collect stamps from all over the world. Each one is like a tiny piece of art!"}, {"title": "MAP", "img": "map", "subject": "Culture", "description": "A map is a flat picture of a place, as if you were looking down from the sky.", "purpose": "Finding your way, and seeing where places are.", "how": "Lines show roads and rivers, colours show land and water, and little symbols show things like towns and hills.", "made": "Paper printed with ink. Many maps are on screens now too.", "origin": "People have drawn maps for thousands of years, on clay, stone, cloth and paper.", "fun": "Most maps put north at the top. Look for the arrow or the letter N to check!"}, {"title": "FLAG", "img": "flag", "subject": "Culture", "description": "A flag is a piece of cloth with colours or a pattern on it. It often flies on a tall pole.", "purpose": "Showing who a place belongs to, sending signals, and decorating for celebrations.", "how": "A rope on the pole pulls the flag up to the top. Then the wind makes it flap and wave.", "made": "Strong cloth such as cotton or nylon, with a rope and a pole.", "origin": "People have carried flags and banners for a very long time, so groups could spot each other from far away.", "fun": "Sailors can talk from ship to ship with flags. There is a different flag for every letter of the alphabet!"}, {"title": "GLOBE", "img": "globe", "subject": "Culture", "description": "A globe is a ball-shaped map of the whole Earth.", "purpose": "Seeing where countries, seas and mountains are on our round planet.", "how": "It sits on a stand and spins, just like the Earth. Turn it to find places on the other side of the world.", "made": "Card, plastic or metal, covered with a printed map.", "origin": "People have made globes for hundreds of years. The oldest one still around was made in Germany over 500 years ago.", "fun": "Spin a globe and you'll see that most of our planet is covered in blue sea!"}, {"title": "KITE", "img": "kite", "subject": "Culture", "description": "A kite is a light frame covered in cloth or paper that flies in the wind on a long string.", "purpose": "Flying for fun on a windy day, and in colourful kite festivals.", "how": "The wind pushes up under the kite and lifts it high. You hold the string so it stays up and doesn't blow away.", "made": "Thin sticks of wood or plastic, covered with cloth, paper or plastic, and a long string.", "origin": "Kites were first flown in China more than 2,000 years ago.", "fun": "Some kites are shaped like fish, birds or dragons! Always fly kites in open spaces, far away from power lines."}, {"title": "CHESS PIECE", "img": "chess-piece", "subject": "Culture", "description": "A chess piece is one of the little figures used to play the game of chess. Each player has 16 pieces.", "purpose": "Playing chess, a thinking game for two players on a checked board.", "how": "Each kind of piece moves in its own way. You try to trap the other player's king. That's called checkmate!", "made": "Wood or plastic, and sometimes stone or glass.", "origin": "Chess began in India about 1,500 years ago, and then spread all around the world.", "fun": "The knight is the only piece that can jump over other pieces. It hops in an L shape!"}, {"title": "PLAYING CARDS", "img": "playing-cards", "subject": "Culture", "description": "Playing cards are a set of small, flat cards for playing games. A full pack has 52 cards.", "purpose": "Playing card games like snap, and doing magic tricks.", "how": "Each card shows a number or a picture. You shuffle them to mix them up, then share them out to play.", "made": "Thin, stiff card with a smooth coating, or plastic.", "origin": "Playing cards were first made in China more than 1,000 years ago.", "fun": "There are four suits: hearts, diamonds, clubs and spades. Can you guess which two are red?"}, {"title": "DICE", "img": "dice", "subject": "Culture", "description": "Dice are small cubes with dots on each side, from one to six.", "purpose": "Playing board games and other games of chance.", "how": "When you roll a die, it tumbles and lands on one side by chance. The dots on top tell you your number.", "made": "Plastic, wood or bone.", "origin": "People have played games with dice for thousands of years.", "fun": "The dots on opposite sides of a die always add up to seven! Dice are small, so ask a grown-up to help keep them away from babies."}, {"title": "TEDDY BEAR", "img": "teddy-bear", "subject": "Culture", "description": "A teddy bear is a soft, cuddly toy shaped like a bear.", "purpose": "Hugging, playing and keeping you company at bedtime.", "how": "It is stuffed with soft filling, so it squishes when you hug it and puffs back up again.", "made": "Soft, furry fabric filled with stuffing, with eyes and a nose sewn or fixed on.", "origin": "Teddy bears were first made over 100 years ago. They were named after an American president, Theodore 'Teddy' Roosevelt.", "fun": "Some people keep their teddy bear their whole life, even when they are grown-ups!"}, {"title": "FOOTBALL", "img": "football", "subject": "Culture", "description": "A football is a big round ball that you kick with your feet.", "purpose": "Playing football, a team game loved all over the world.", "how": "The ball is full of air, so it is light and bouncy. Kick it and it flies through the air or rolls across the grass.", "made": "A rubber bag full of air inside, covered with panels of leather or plastic.", "origin": "People have kicked balls in games for thousands of years. The football game we play today began in England in the 1800s.", "fun": "In football, only the goalkeeper is allowed to catch the ball with their hands!"}, {"title": "BIRTHDAY CAKE", "img": "birthday-cake", "subject": "Culture", "description": "A birthday cake is a sweet cake made to celebrate someone's birthday. It often has candles on top.", "purpose": "Sharing with family and friends on a birthday.", "how": "Flour, eggs, sugar and butter are mixed and baked in a hot oven until the cake rises and turns soft and spongy.", "made": "Flour, eggs, sugar and butter, with icing and decorations on top.", "origin": "People have baked special cakes for celebrations for hundreds of years.", "fun": "Make a wish and blow out all the candles in one big puff! Candles are hot, so ask a grown-up to help light them."}, {"title": "LANTERN", "img": "lantern", "subject": "Culture", "description": "A lantern is a light you can carry, with a flame or a bulb safely inside a case.", "purpose": "Lighting the way in the dark, and decorating for festivals.", "how": "Glass or paper sides let the light shine out, while keeping the wind away from the flame.", "made": "Metal, glass or paper, with a candle, oil or a battery light inside.", "origin": "People have used lanterns for thousands of years to carry light from place to place.", "fun": "At many festivals around the world, people hang up hundreds of glowing lanterns. If a lantern has a flame, ask a grown-up to help."}, {"title": "CHOPSTICKS", "img": "chopsticks", "subject": "Culture", "description": "Chopsticks are a pair of thin sticks used for eating.", "purpose": "Picking up food like noodles, rice and vegetables.", "how": "You hold both sticks in one hand. The top stick moves and pinches the food against the bottom one.", "made": "Wood, bamboo, plastic or metal.", "origin": "Chopsticks were first used in China thousands of years ago. Today, people use them every day in places like China, Japan, Korea and Vietnam.", "fun": "Using chopsticks takes practice. Try picking up cotton wool balls. It's tricky, but fun!"}, {"title": "FORK", "img": "fork", "subject": "Culture", "description": "A fork is a tool for eating, with a handle and a few pointy prongs at the end.", "purpose": "Picking up food, and holding it still while you cut it.", "how": "The prongs poke into food or scoop it up, so you can lift it to your mouth.", "made": "Metal, plastic or wood.", "origin": "Forks have been used for eating for hundreds of years. Before that, many people ate with knives, spoons and their fingers.", "fun": "The pointy prongs on a fork are called tines. They can be sharp, so ask a grown-up to help."}, {"title": "PAINTBRUSH", "img": "paintbrush", "subject": "Culture", "description": "A paintbrush is a handle with soft bristles on the end, for painting.", "purpose": "Painting pictures, and painting walls and fences too.", "how": "The bristles soak up paint. Then you sweep the brush across the paper to leave a trail of colour.", "made": "A wooden or plastic handle, a metal band, and bristles made of hair or nylon.", "origin": "People have painted with brushes for thousands of years.", "fun": "Wash your brush in water between colours, or your blue might turn green when you dip it in yellow!"}, {"title": "CAMERA", "img": "camera", "subject": "Culture", "description": "A camera is a machine that takes photos. It catches a picture of whatever it is pointed at.", "purpose": "Taking photos and videos to remember special moments.", "how": "Light comes in through the round glass lens. When you press the button, the camera catches that light and turns it into a picture.", "made": "Metal or plastic, with glass lenses, and often batteries and electronic parts inside.", "origin": "The first photos were taken about 200 years ago. People had to keep very still for a long time!", "fun": "Many phones have tiny cameras hidden inside them! Cameras use batteries, so ask a grown-up to help."}, {"title": "TELEPHONE", "img": "telephone", "subject": "Culture", "description": "A telephone is a machine that lets you talk to someone far away.", "purpose": "Calling family and friends, and getting help in an emergency.", "how": "It turns your voice into signals that travel through wires or through the air. The other phone turns them back into sound.", "made": "Plastic and metal, with a speaker, a microphone and electronic parts inside.", "origin": "The telephone was invented about 150 years ago. Alexander Graham Bell made one of the first phone calls in 1876.", "fun": "Old phones had a round dial that you spun with your finger to call a number! Ask a grown-up to help you make a call."}, {"title": "TOOTHPASTE", "img": "toothpaste", "subject": "Human", "description": "Toothpaste is a minty paste that you squeeze onto your toothbrush. It helps clean your teeth and freshen your breath.", "purpose": "Cleaning your teeth and helping to keep them strong and free of holes.", "how": "As you brush, the paste foams up. Tiny gentle grains help scrub away food and germs.", "made": "Water, a gentle scrubbing powder, a minty flavour and fluoride, which helps keep teeth strong.", "origin": "People cleaned their teeth with powders thousands of years ago. Toothpaste in squeezy tubes came along over a hundred years ago.", "fun": "You only need a blob about the size of a pea! Spit it out when you finish, and never swallow it. Ask a grown-up to help."}, {"title": "SOAP", "img": "soap", "subject": "Human", "description": "Soap is a slippery cleaner that makes bubbles when you rub it with water. It often comes as a bar or a liquid.", "purpose": "Washing dirt and germs off your hands and body.", "how": "Soap grabs hold of grease and dirt on your skin. When you rinse with water, the dirt washes away with it.", "made": "Oils or fats mixed with a strong cleaning ingredient, often with a nice smell and colour added.", "origin": "People have been making soap for thousands of years.", "fun": "Wash your hands for about 20 seconds. That is as long as singing Happy Birthday twice!"}, {"title": "COMB", "img": "comb", "subject": "Human", "description": "A comb is a flat strip with a row of thin teeth. You pull it through your hair to make it neat.", "purpose": "Untangling hair and making a tidy parting or style.", "how": "The teeth slide between your hairs and gently pull out the knots, so the hairs lie side by side.", "made": "Plastic, wood, metal or horn.", "origin": "Combs are one of the oldest tools people have. They have been used for thousands of years.", "fun": "A comb has lots of teeth, but it can never bite! Run a plastic comb through dry hair and it can pick up tiny bits of paper."}, {"title": "HAIRBRUSH", "img": "hairbrush", "subject": "Human", "description": "A hairbrush has a handle and a head covered in lots of bristles. It smooths and untangles your hair.", "purpose": "Brushing out knots and making hair smooth and tidy.", "how": "The bristles spread through your hair, catch the tangles and gently pull them loose.", "made": "A plastic or wooden handle, with bristles of plastic or animal hair.", "origin": "People have been brushing their hair for hundreds of years.", "fun": "Start brushing at the ends of your hair and work your way up. Knots come out much more easily that way!"}, {"title": "SOCK", "img": "sock", "subject": "Human", "description": "A sock is a soft, stretchy covering for your foot. You wear it inside your shoe.", "purpose": "Keeping your feet warm and dry, and stopping your shoes from rubbing.", "how": "The stretchy cloth hugs your foot and soaks up sweat, so your feet stay comfy.", "made": "Cotton, wool or stretchy man-made threads.", "origin": "People have kept their feet warm with socks for thousands of years.", "fun": "Socks seem to vanish in the washing machine! Pair them up before washing so no sock is left on its own."}, {"title": "SHOE", "img": "shoe", "subject": "Human", "description": "A shoe is a strong covering for your foot. It has a tough sole underneath to protect you as you walk.", "purpose": "Protecting your feet from sharp stones, hot or cold ground and dirt.", "how": "The thick sole takes the bumps, and laces, straps or Velcro hold the shoe snugly on your foot.", "made": "Leather, rubber, canvas or plastic.", "origin": "Some of the oldest shoes ever found are sandals woven from tree bark, about 10,000 years old.", "fun": "Children's feet grow so fast that they can need bigger shoes more than once a year!"}, {"title": "HAT", "img": "hat", "subject": "Human", "description": "A hat is something you wear on your head. Some keep you warm, and some keep the sun off.", "purpose": "Keeping your head warm in winter, or shading your face and eyes from the sun.", "how": "A woolly hat traps warm air around your head. A wide brim makes a little patch of shade over your face.", "made": "Wool, cotton, straw, felt or leather.", "origin": "People have worn hats for thousands of years, to keep off the sun, the rain and the cold.", "fun": "Some hats tell you about a person's job, like a chef's tall white hat or a firefighter's helmet!"}, {"title": "GLASSES", "img": "glasses", "subject": "Human", "description": "Glasses are two clear lenses held in a frame. They rest on your nose and ears and help you see clearly.", "purpose": "Helping people whose eyes see things blurry to see sharply again.", "how": "The curved lenses bend the light a little, so it lands in just the right place inside your eye.", "made": "Lenses of glass or clear plastic, in a frame of metal or plastic.", "origin": "Glasses were invented in Italy about 700 years ago.", "fun": "The arms of your glasses hook over your ears, so your ears are working as a little shelf!"}, {"title": "BUTTON", "img": "button", "subject": "Human", "description": "A button is a small, flat disc sewn onto clothes. It keeps a shirt, coat or cardigan closed.", "purpose": "Fastening clothes so they stay closed.", "how": "You push the button through a little slit called a buttonhole. Once it is through, it lies flat and cannot slip back out.", "made": "Plastic, metal, wood or shell.", "origin": "People made buttons thousands of years ago, but at first just for decoration. Buttonholes came along in the Middle Ages.", "fun": "Buttons come in every colour and shape, even stars and hearts! They are small, so never put one in your mouth. Ask a grown-up to help sew one back on."}, {"title": "BACKPACK", "img": "backpack", "subject": "Human", "description": "A backpack is a bag with two straps that you carry on your back. It is also called a rucksack.", "purpose": "Carrying books, a lunch, a coat and other things, while keeping your hands free.", "how": "The two straps share the weight across both shoulders, so a heavy load feels easier to carry.", "made": "Strong cloth such as nylon or canvas, with zips and buckles.", "origin": "People have carried packs on their backs for thousands of years. Ötzi the Iceman, who lived over 5,000 years ago, had a backpack frame made of wood.", "fun": "Wear both straps, not just one. Your back will thank you!"}, {"title": "PILLOW", "img": "pillow", "subject": "Human", "description": "A pillow is a soft cushion for your head. You rest on it when you lie down to sleep.", "purpose": "Holding up your head and neck so you can sleep comfortably.", "how": "The soft filling squashes down to fit the shape of your head, then springs back when you get up.", "made": "A cloth cover filled with feathers, foam or fluffy fibres.", "origin": "Long ago in Egypt and China, some people rested their heads on hard pillows made of wood, stone or pottery!", "fun": "Give your pillow a shake and a squash to fluff it up. Air gets back in between the filling and it puffs up again!"}, {"title": "BLANKET", "img": "blanket", "subject": "Human", "description": "A blanket is a big, soft cover. You snuggle under it to stay warm in bed or on the sofa.", "purpose": "Keeping you warm and cosy when you rest or sleep.", "how": "A blanket traps the warm air your body gives off and holds it close to you.", "made": "Wool, cotton or soft fleece.", "origin": "People have kept warm under animal furs and woven cloth for thousands of years.", "fun": "A blanket doesn't make any heat itself. It holds in the heat from your own body, so you are your own heater!"}, {"title": "TOWEL", "img": "towel", "subject": "Human", "description": "A towel is a thick, soft cloth. You use it to dry yourself after a bath, a shower or a swim.", "purpose": "Drying your body, hair and hands.", "how": "A towel is covered in tiny loops of thread. They soak up water like a sponge.", "made": "Usually cotton.", "origin": "Fluffy towels with loops became common in the 1800s, when factories learned how to weave them.", "fun": "A wet towel gets much heavier, because it holds so much water. Hang it up so it is dry for next time!"}, {"title": "MUG", "img": "mug", "subject": "Human", "description": "A mug is a big, sturdy cup with a handle. It is just right for warm drinks.", "purpose": "Drinking hot chocolate, tea, milk or soup.", "how": "You hold the handle, so your fingers stay away from the hot sides. The thick walls keep the drink warm for longer.", "made": "Pottery, glass, metal or plastic.", "origin": "People have made drinking cups out of clay for thousands of years.", "fun": "Some mugs change colour or show a hidden picture when a hot drink is poured in! Ask a grown-up to help with hot drinks."}, {"title": "PLATE", "img": "plate", "subject": "Human", "description": "A plate is a flat, round dish. You put your food on it to eat.", "purpose": "Holding food at mealtimes.", "how": "The flat middle holds your food, and the raised edge stops peas and gravy from sliding off.", "made": "China, pottery, glass, metal, plastic or even paper.", "origin": "Long ago, some people ate off thick slices of old bread called trenchers, instead of plates!", "fun": "In some places, people eat off a big banana leaf instead of a plate! If a plate breaks, the pieces are sharp. Ask a grown-up to help."}, {"title": "CHAIR", "img": "chair", "subject": "Human", "description": "A chair is a seat for one person. It usually has four legs and a back to lean on.", "purpose": "Sitting down to eat, read, draw or rest.", "how": "The legs carry your weight down to the floor, and the back holds you up so you can relax.", "made": "Wood, metal or plastic, sometimes with a soft cushion.", "origin": "Chairs are very old. Fancy chairs have been found in the tombs of ancient Egyptian kings.", "fun": "In the game musical chairs, there is always one chair fewer than players. When the music stops, quick, sit down!"}, {"title": "SPOON", "img": "spoon", "subject": "Human", "description": "A spoon is a little bowl on the end of a handle. You use it to eat soup, cereal and yoghurt.", "purpose": "Scooping up food, stirring and eating runny things.", "how": "The round bowl holds food and liquid, and the handle lets you lift it to your mouth.", "made": "Metal, wood or plastic.", "origin": "People have used spoons for thousands of years. The first ones were shells and carved bits of wood or bone.", "fun": "Look into a shiny spoon. In the hollow side you appear upside down, but on the back you are the right way up!"}, {"title": "PLASTER", "img": "plaster", "subject": "Human", "description": "A plaster is a small sticky strip with a soft pad in the middle. It covers small cuts and scrapes.", "purpose": "Keeping dirt and germs out of a small cut while it heals.", "how": "The sticky ends hold onto your skin, and the soft pad sits over the cut to protect it.", "made": "A strip of cloth or plastic, a sticky glue, and a soft cotton pad.", "origin": "Sticking plasters were invented about a hundred years ago. Before that, people tied on strips of cloth.", "fun": "Plasters come in fun colours and patterns, so a scraped knee can wear dinosaurs or stars! Ask a grown-up to help clean the cut first."}, {"title": "LUNCH BOX", "img": "lunch-box", "subject": "Human", "description": "A lunch box is a box with a lid for carrying your food. You take it to school or on a day out.", "purpose": "Keeping your lunch clean, safe and not squashed until it is time to eat.", "how": "The lid closes tightly to keep food in and dirt out. Some have an ice pack to keep food cool.", "made": "Plastic, metal or padded cloth.", "origin": "Long ago, workers carried lunch in metal pails. Lunch boxes with cartoon pictures became popular with children in the 1950s.", "fun": "Bento boxes from Japan have lots of little sections, so every food gets its very own room!"}, {"title": "WATER BOTTLE", "img": "water-bottle", "subject": "Human", "description": "A water bottle is a bottle with a lid that you can carry around. It lets you have a drink wherever you go.", "purpose": "Carrying water so you can drink whenever you are thirsty.", "how": "The lid seals the top so water cannot spill. Some bottles have two walls that keep drinks cold for hours.", "made": "Plastic, metal or glass.", "origin": "Long ago, travellers carried water in bags made from animal skins or in dried, hollow fruits called gourds.", "fun": "Your body is more than half water! Sipping water through the day helps you think and play."}, {"title": "GLOVES", "img": "gloves", "subject": "Human", "description": "Gloves are coverings for your hands, with a little space for each finger and thumb.", "purpose": "Keeping your hands warm, and protecting them from cold, dirt or scratches.", "how": "The cloth traps warm air around each finger. Because your fingers are separate, you can still hold things.", "made": "Wool, leather, cotton or rubber.", "origin": "People have worn gloves for thousands of years. Gloves were even found in the tomb of the Egyptian king Tutankhamun.", "fun": "Mittens keep fingers warmer than gloves, because your fingers snuggle up together and share their heat!"}, {"title": "SCARF", "img": "scarf", "subject": "Human", "description": "A scarf is a long strip of soft cloth. You wrap it around your neck to keep warm.", "purpose": "Keeping your neck and chin warm on cold, windy days.", "how": "Wrapping it round your neck traps warm air and stops chilly wind getting down your collar.", "made": "Wool, cotton or silk.", "origin": "People have wrapped cloth around their necks to keep warm for thousands of years.", "fun": "Football fans wear scarves in their team's colours and hold them high to cheer! Tuck your scarf in on slides and climbing frames, so it can't get caught."}, {"title": "SLIPPERS", "img": "slippers", "subject": "Human", "description": "Slippers are soft, comfy shoes that you wear indoors. They keep your feet cosy at home.", "purpose": "Keeping your feet warm on cold floors and keeping outdoor dirt out of the house.", "how": "The soft sole sits between your feet and the cold floor. They have no laces, so they slip on and off easily.", "made": "Soft cloth, fleece, wool or felt, often with a bendy rubber sole.", "origin": "People have worn soft shoes indoors for hundreds of years.", "fun": "They are called slippers because you can slip them on and off without doing up any laces!"}, {"title": "BED", "img": "bed", "subject": "Human", "description": "A bed is a piece of furniture for sleeping on. It has a frame and a soft mattress, with a pillow and covers on top.", "purpose": "Giving you a comfy, cosy place to sleep each night.", "how": "The springy mattress holds up your body, and the frame lifts you off the cold floor.", "made": "A frame of wood or metal, and a mattress of springs, foam and cloth.", "origin": "Long ago, people slept on piles of grass, leaves or animal skins. The ancient Egyptians had raised beds.", "fun": "You will spend about a third of your whole life asleep. That is a lot of time in bed!"}, {"title": "TISSUES", "img": "tissues", "subject": "Human", "description": "Tissues are thin, soft sheets of paper. You use one to blow your nose or catch a sneeze.", "purpose": "Catching sneezes and coughs and wiping your nose, so germs do not spread.", "how": "The soft paper soaks up wetness. You use it once and put it in the bin, then wash your hands.", "made": "Very thin, soft paper made from wood.", "origin": "Paper tissues became popular about a hundred years ago. Before that, people used cloth handkerchiefs.", "fun": "In a tissue box, the tissues are folded into each other, so pulling one out pops the next one up, ready to go!"}];
+FACTS.push(...EXTRA);
+const DETAIL_ROWS = [["What it’s for", "purpose"], ["How it works", "how"], ["Made from", "made"], ["Where it came from", "origin"], ["Fun fact", "fun"]];
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const pad2 = n => String(n).padStart(2, "0");
+const shuffle = a => { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
+const imgSrc = f => `images/${f.img}.jpg`;
+const reduceMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ---------- state ---------- */
+const root = document.getElementById("root");
+let backStack = [];        // screens behind the current one, so Back returns where you came from
+let state = { screen: "splash" };
+let detail = null;         // { list, active, from, label, busy }
+
+/* ---------- read aloud ---------- */
+const synth = "speechSynthesis" in window ? window.speechSynthesis : null;
+let voice = null, reading = false;
+function pickVoice() {
+  const vs = synth.getVoices();
+  voice = vs.find(v => /^en/i.test(v.lang) && /samantha|karen|google uk english female|zira|aria|jenny|female/i.test(v.name)) || vs.find(v => /^en/i.test(v.lang)) || null;
+}
+if (synth) { pickVoice(); synth.onvoiceschanged = pickVoice; }
+function stopReading() {
+  if (synth) synth.cancel();
+  reading = false;
+  document.querySelectorAll(".reading").forEach(e => e.classList.remove("reading"));
+  const b = document.querySelector(".listen");
+  if (b) { b.setAttribute("aria-pressed", "false"); b.innerHTML = ICON_SPEAK; b.setAttribute("aria-label", "Read this out loud"); }
+}
+function readCard() {
+  if (!synth) return;
+  stopReading();
+  const blocks = [...document.querySelectorAll("#card-current [data-say]")];
+  reading = true;
+  const b = document.querySelector(".listen");
+  if (b) { b.setAttribute("aria-pressed", "true"); b.innerHTML = ICON_STOP; b.setAttribute("aria-label", "Stop reading"); }
+  blocks.forEach((el, i) => {
+    const u = new SpeechSynthesisUtterance(el.dataset.say);
+    if (voice) u.voice = voice;
+    u.rate = 0.9; u.pitch = 1.05;
+    u.onstart = () => { document.querySelectorAll(".reading").forEach(e => e.classList.remove("reading")); el.classList.add("reading"); el.scrollIntoView({ block: "nearest", behavior: reduceMotion() ? "auto" : "smooth" }); };
+    u.onend = () => { el.classList.remove("reading"); if (i === blocks.length - 1) stopReading(); };
+    synth.speak(u);
+  });
+}
+
+/* ---------- stars and sounds (saved on this device only) ---------- */
+const PROGRESS_KEY = "dailythings.progress.v1";
+let progress = { learned: [], stars: 0, sound: true };
+try { const saved = JSON.parse(localStorage.getItem(PROGRESS_KEY) || "null"); if (saved) progress = { ...progress, ...saved }; } catch (e) {}
+const saveProgress = () => { try { localStorage.setItem(PROGRESS_KEY, JSON.stringify(progress)); } catch (e) {} };
+const isLearned = f => progress.learned.includes(f.img);
+const niceName = f => f.title.charAt(0) + f.title.slice(1).toLowerCase();
+const starChip = () => `<span class="star-chip" aria-label="${progress.stars} stars">${STAR("#153744")}<b data-stars>${progress.stars}</b></span>`;
+function addStar() {
+  progress.stars += 1; saveProgress();
+  document.querySelectorAll("[data-stars]").forEach(el => { el.textContent = progress.stars; const chip = el.closest(".star-chip"); chip.classList.remove("bump"); void chip.offsetWidth; chip.classList.add("bump"); });
+}
+
+// Short, gentle chimes made in the browser: no sound files to download.
+let audio = null;
+function chime(kind) {
+  if (!progress.sound) return;
+  try {
+    audio = audio || new (window.AudioContext || window.webkitAudioContext)();
+    const notes = { win: [523.25, 659.25, 783.99, 1046.5], pop: [880], oops: [311.13, 261.63] }[kind];
+    notes.forEach((f, i) => {
+      const o = audio.createOscillator(), g = audio.createGain(), t = audio.currentTime + i * (kind === "win" ? 0.09 : 0.12);
+      o.type = kind === "oops" ? "sine" : "triangle"; o.frequency.value = f;
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.exponentialRampToValueAtTime(kind === "pop" ? 0.08 : 0.14, t + 0.02);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + 0.3);
+      o.connect(g).connect(audio.destination); o.start(t); o.stop(t + 0.32);
+    });
+  } catch (e) {}
+}
+
+function confetti(fromEl) {
+  if (reduceMotion()) return;
+  const host = document.querySelector(".screen"), hr = host.getBoundingClientRect(), r = fromEl.getBoundingClientRect();
+  const layer = document.createElement("div"); layer.className = "confetti";
+  const cx = r.left + r.width / 2 - hr.left, cy = r.top + r.height / 2 - hr.top;
+  const colours = ["#FFCF5A", "#5FA882", "#5A9EBB", "#E09A52", "#9783CF", "#F28B7B"];
+  for (let i = 0; i < 36; i++) {
+    const a = Math.random() * Math.PI * 2, d = 80 + Math.random() * 130, c = colours[i % colours.length];
+    const bit = document.createElement("i");
+    if (i % 3 === 0) { bit.className = "star"; bit.innerHTML = STAR(c); } else bit.style.background = c;
+    bit.style.left = cx + "px"; bit.style.top = cy + "px";
+    bit.style.setProperty("--dx", Math.cos(a) * d + "px");
+    bit.style.setProperty("--dy", Math.sin(a) * d - 40 + "px");
+    bit.style.setProperty("--r", (Math.random() * 540 - 270) + "deg");
+    layer.appendChild(bit);
+  }
+  host.appendChild(layer);
+  setTimeout(() => layer.remove(), 1100);
+}
+
+function speakOnce(text) {
+  if (!synth) return;
+  stopReading();
+  const u = new SpeechSynthesisUtterance(text);
+  if (voice) u.voice = voice;
+  u.rate = 0.9; u.pitch = 1.1;
+  synth.speak(u);
+}
+
+/* ---------- screens (markup kept to the prototype's own) ---------- */
+function mark() {
+  return `<div class="flex items-center gap-2" aria-label="Daily Things">${LOGO(32)}<span class="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#153744]">Daily things</span></div>`;
+}
+const backBtn = label => `<button type="button" data-act="back" class="round-btn grid size-10 place-items-center rounded-full border border-[#153744]/15 text-xl transition-colors hover:bg-[#153744]/5" aria-label="${esc(label)}">${SNAKE("left")}</button>`;
+
+function splash() {
+  return `<main class="splash-enter flex min-h-dvh flex-col items-center justify-center bg-[#F2EFE7] text-[#0A5270]">
+    <div class="relative grid size-28 place-items-center rounded-full border border-[#0A5270]/25"><div class="absolute inset-3 rounded-full border border-[#0A5270]/10"></div>
+      ${LOGO(72)}</div>
+    <p class="mt-6 text-xs font-semibold uppercase tracking-[0.25em]">Daily things</p>
+    <p class="mt-2 text-sm text-[#55717B]">One curious thing, every day.</p>
+  </main>`;
+}
+
+// Website top bar (computers only; hidden on phones by CSS).
+function soundBtn() {
+  return `<button type="button" class="sound-btn" data-act="sound" aria-pressed="${progress.sound}" aria-label="${progress.sound ? "Turn sounds off" : "Turn sounds on"}">${progress.sound ? ICON_SOUND_ON : ICON_SOUND_OFF}</button>`;
+}
+function siteNav() {
+  const at = state.screen, from = detail && at === "detail" ? detail.from : null;
+  const link = (act, label, on) => `<button type="button" class="nav-link${on ? " on" : ""}" data-act="${act}"${on ? ' aria-current="page"' : ""}>${label}</button>`;
+  return `<nav class="site-nav" aria-label="Main"><div class="site-nav-in">
+    <button type="button" class="nav-brand" data-act="nav-home" aria-label="Daily Things, home">${LOGO(32)}<span class="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#153744]">Daily things</span></button>
+    <div class="nav-links">${link("nav-random", "Random", from === "home")}${link("nav-subjects", "Subjects", at === "subjects" || from === "subject")}${link("nav-game", "Guess what?", at === "game" || from === "game")}</div>
+    <div class="head-right">${starChip()}${soundBtn()}</div>
+  </div></nav>`;
+}
+
+function home() {
+  const date = new Intl.DateTimeFormat("en", { month: "short", day: "numeric" }).format(new Date());
+  return `${siteNav()}<main class="page screen-enter min-h-dvh bg-[#F2EFE7] px-6 pb-10 pt-7 text-[#153744]">
+    <header class="home-head mx-auto flex max-w-md items-center justify-between">${mark()}<div class="head-right"><p class="text-xs font-medium text-[#67808A]">${date}</p>${starChip()}${soundBtn()}</div></header>
+    <section class="home-hero mx-auto mt-12 max-w-md">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-[#0A6C91]">Learn something small</p>
+      <h1 class="mt-4 max-w-xs text-[42px] font-semibold leading-[0.95] tracking-[-0.045em]">What are you curious about today?</h1>
+      <div class="home-cards mt-10 grid gap-3">
+        <button type="button" data-act="random" class="group flex min-h-44 flex-col justify-between rounded-[28px] bg-[#075C7D] p-6 text-left text-white shadow-[0_18px_45px_rgba(7,92,125,0.16)] transition-transform active:scale-[0.98]">
+          <span class="flex items-start justify-between"><span class="text-xs font-semibold uppercase tracking-[0.18em] text-white/65">Surprise me</span>${ICON_DICE}</span>
+          <span><span class="block text-3xl font-semibold tracking-[-0.03em]">Random</span><span class="mt-1 block text-sm text-white/65">Discover today’s unexpected thing.</span></span>
+        </button>
+        <button type="button" data-act="subjects" class="subject-card group flex min-h-44 flex-col justify-between rounded-[28px] p-6 text-left transition-transform active:scale-[0.98]">
+          <span class="flex items-start justify-between"><span class="subject-card-label text-xs font-semibold uppercase tracking-[0.18em]">Pick a topic</span>${ICON_GROUPS}</span>
+          <span class="flex items-end justify-between"><span><span class="subject-home-title block text-3xl font-semibold tracking-[-0.03em]">Subject</span><span class="subject-card-sub mt-1 block text-sm">Browse things by what you love.</span></span>
+          <span class="mb-1 text-[#153744]">${SNAKE("right")}</span></span>
+        </button>
+        <button type="button" data-act="game" class="game-card group flex min-h-44 flex-col justify-between rounded-[28px] p-6 text-left transition-transform active:scale-[0.98]">
+          <span class="flex items-start justify-between"><span class="game-card-label text-xs font-semibold uppercase tracking-[0.18em]">Mystery game</span>${ICON_MYSTERY}</span>
+          <span class="flex items-end justify-between"><span><span class="block text-3xl font-semibold tracking-[-0.03em] text-[#153744]">Guess what?</span><span class="game-card-sub mt-1 block text-sm">Can you tell what’s in the picture?</span></span>
+          <span class="mb-1 text-[#153744]">${SNAKE("right")}</span></span>
+        </button>
+      </div>
+    </section>
+  </main>`;
+}
+
+function subjects() {
+  return `${siteNav()}<main class="page screen-enter min-h-dvh bg-[#F2EFE7] px-6 pb-10 pt-7 text-[#153744]">
+    <header class="screen-head mx-auto flex max-w-md items-center justify-between">${backBtn("Back to home")}${mark()}<span class="spacer-44"></span></header>
+    <section class="subjects-wrap mx-auto mt-14 max-w-md">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-[#0A6C91]">Explore the everyday</p>
+      <h1 class="mt-3 text-[42px] font-semibold leading-none tracking-[-0.045em]">Choose a subject.</h1>
+      <p class="mt-4 max-w-xs text-base leading-6 text-[#617780]">Follow a thread and uncover the stories hiding in ordinary things.</p>
+      <div class="subjects-grid mt-10 grid grid-cols-2 gap-3">${SUBJECTS.map(s => {
+        const n = FACTS.filter(f => f.subject === s.name).length;
+        const learned = FACTS.filter(f => f.subject === s.name && isLearned(f)).length;
+        return `<button type="button" data-act="subject" data-name="${s.name}" class="${s.tone} subject-tile transition-transform active:scale-[0.98]" style="--ink:${s.ink}">
+          <img class="subject-photo" src="images/${s.photo}.jpg" alt="" draggable="false">
+          <span class="subject-text"><span class="subject-name">${s.name}</span><span class="tile-hint">${s.hint}</span><span class="tile-count">${n} things${learned ? ` · ${learned} learned` : ""}</span></span>
+        </button>`;
+      }).join("")}</div>
+    </section>
+  </main>`;
+}
+
+function factCard(f, cls, id) {
+  const say = (t) => `data-say="${esc(t)}"`;
+  return `<article ${id ? `id="${id}"` : ""} class="${cls} flex min-h-[calc(100dvh-68px)] w-full flex-col bg-[#F7F6F1] px-6 pb-12">
+    <div class="relative mx-auto mt-3 aspect-[1.12] w-full max-w-sm overflow-hidden rounded-[34px] bg-[#E6EBE9]"${id ? ` data-act="pop" data-name="${esc(niceName(f))}"` : ""}>
+      <img alt="${esc(f.title.toLowerCase())}" class="size-full object-cover" draggable="false" src="${imgSrc(f)}">
+      <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-[#153744]/5"></div>
+      <p class="absolute left-4 top-4 rounded-full bg-[#F7F6F1]/88 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#0A6C91] backdrop-blur-md">${esc(f.subject)} · Everyday object</p>
+      ${synth && id ? `<button type="button" class="listen" data-act="listen" aria-pressed="false" aria-label="Read this out loud">${ICON_SPEAK}</button>` : ""}
+    </div>
+    <section class="mx-auto mt-6 w-full max-w-sm text-center">
+      <h1 class="text-[38px] font-bold leading-[0.92] tracking-[-0.035em] text-[#0879AA]" ${say(f.title.toLowerCase())}>${esc(f.title)}</h1>
+      <p class="kid-desc mt-5 text-[15px] font-medium leading-[1.45] text-[#4D5A5F]" ${say(f.description)}>${esc(f.description)}</p>
+    </section>
+    <section class="mx-auto mt-8 w-full max-w-sm border-t border-[#A9BBC1]/65 pt-7 text-left">
+      <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#0A6C91]">Extra details</p>
+      <dl class="mt-4 divide-y divide-[#A9BBC1]/45">${DETAIL_ROWS.map(([label, key]) => `
+        <div class="grid gap-1 py-4" ${say(`${label}. ${f[key]}`)}><dt class="text-xs font-bold uppercase tracking-[0.08em] text-[#294A57]">${label}:</dt><dd class="kid-dd m-0 text-[15px] leading-6 text-[#61747B]">${esc(f[key])}</dd></div>`).join("")}
+      </dl>
+    </section>
+    ${id ? `<section class="mx-auto mt-6 w-full max-w-sm">${learnButton(f)}</section>${pager()}` : ""}
+  </article>`;
+}
+
+function learnButton(f) {
+  return isLearned(f)
+    ? `<button type="button" class="learn-btn done" disabled>${ICON_CHECK} You learned this one!</button>`
+    : `<button type="button" class="learn-btn" data-act="learn" data-img="${f.img}">${STAR("#153744")} I learned it!</button>`;
+}
+
+function pager() {
+  const { list, active } = detail;
+  const next = list[(active + 1) % list.length];
+  return `<section class="mx-auto mt-6 grid w-full max-w-sm" style="gap:18px">
+    <button type="button" data-act="next" class="next-card group flex items-center justify-between gap-4 rounded-[28px] border border-[#153744]/10 bg-[#E4E9E3] p-5 text-left text-[#153744] transition-transform active:scale-[0.98]">
+      <span class="min-w-0"><span class="block text-xs font-semibold uppercase tracking-[0.18em] text-[#0A6C91]">Next thing ${SNAKE("right", 18)}</span><span class="mt-2 block text-3xl font-semibold tracking-[-0.03em]">${esc(next.title.charAt(0) + next.title.slice(1).toLowerCase())}</span></span>
+      <img class="next-thumb" src="${imgSrc(next)}" alt="" draggable="false">
+    </button>
+    <div class="pager">
+      <button type="button" data-act="prev" class="round-btn grid size-10 place-items-center rounded-full border border-[#153744]/15 text-xl text-[#153744] transition-colors hover:bg-[#153744]/5" aria-label="Previous thing">${SNAKE("left")}</button>
+      ${list.length > 10
+        ? `<p class="text-sm font-semibold tabular-nums text-[#61747B]">${active + 1} of ${list.length}</p>`
+        : `<div class="dots" aria-label="Thing ${active + 1} of ${list.length}">${list.map((_, i) => `<i class="${i === active ? "on" : ""}"></i>`).join("")}</div>`}
+      <button type="button" data-act="next" class="round-btn grid size-10 place-items-center rounded-full border border-[#153744]/15 text-xl text-[#153744] transition-colors hover:bg-[#153744]/5" aria-label="Next thing">${SNAKE("right")}</button>
+    </div>
+    <p class="swipe-hint text-center text-xs font-medium text-[#78909A]">Swipe left or right to see more</p>
+    <p class="key-hint text-center text-xs font-medium text-[#78909A]">Tip: the ← and → keys on your keyboard work too</p>
+  </section>`;
+}
+
+function detailScreen() {
+  const { list, active } = detail;
+  return `${siteNav()}<main id="detail" class="screen-enter mx-auto min-h-dvh w-full max-w-lg overflow-hidden bg-[#F7F6F1] text-[#38474D] touch-pan-y" tabindex="-1">
+    <header class="screen-head dt-head flex items-center justify-between px-5 pb-2 pt-5">${backBtn(detail.from === "subject" ? "Back to subjects" : detail.from === "game" ? "Back to the game" : "Back to home")}${mark()}<span class="spacer-44 text-right text-xs font-semibold tabular-nums text-[#78909A]" aria-label="Thing ${active + 1} of ${list.length}">${pad2(active + 1)}</span></header>
+    <div class="relative" id="stage">${factCard(list[active], "", "card-current")}</div>
+  </main>`;
+}
+
+let game = null;  // { thing, options, wrong, solved, fx, fy }
+// Photos that show another object too (the compass lies on a map, the pillow has a teddy bear on it).
+// Such pairs never appear in the same question, so a child is never marked wrong for naming what they see.
+const LOOKS_ALIKE = [["compass", "map"], ["pillow", "teddy-bear"], ["tea-bag", "mug"], ["map", "mug"],
+  ["birthday-cake", "candle"], ["lunch-box", "fridge"], ["glasses", "notebook"]];
+const confusable = (a, b) => LOOKS_ALIKE.some(([x, y]) => (a.img === x && b.img === y) || (a.img === y && b.img === x));
+function newRound() {
+  const pool = FACTS.filter(f => !game || f !== game.thing);
+  const thing = pool[Math.floor(Math.random() * pool.length)];
+  const others = shuffle(FACTS.filter(f => f.subject !== thing.subject && !confusable(f, thing))).slice(0, 2);
+  game = { thing, options: shuffle([thing, ...others]), wrong: [], solved: false, fx: 30 + Math.random() * 40, fy: 30 + Math.random() * 40 };
+}
+// Starts close up; every wrong guess zooms out a little as a hint.
+const gameZoom = () => (game.solved ? 1 : [2.8, 1.9, 1.4][Math.min(game.wrong.length, 2)]);
+const gameAfter = () => `<button type="button" class="learn-btn" data-act="next-round">${STAR("#153744")} Next mystery</button>
+  <button type="button" class="guess-opt center" data-act="learn-about">Learn about it ${SNAKE("right", 22)}</button>`;
+
+function gameScreen() {
+  const { thing, options, wrong, solved, fx, fy } = game;
+  return `${siteNav()}<main class="page screen-enter min-h-dvh bg-[#F2EFE7] px-6 pb-10 pt-7 text-[#153744]">
+    <header class="screen-head mx-auto flex max-w-md items-center justify-between">${backBtn("Back to home")}${mark()}<span class="spacer-44" style="display:flex;justify-content:flex-end">${starChip()}</span></header>
+    <section class="game-wrap mx-auto mt-8 max-w-md">
+      <p class="mystery-label text-xs font-semibold uppercase tracking-[0.18em]">Mystery game</p>
+      <h1 class="mt-3 text-[38px] font-semibold leading-none tracking-[-0.045em]">Guess what?</h1>
+      <div class="mystery mt-6"><img id="mystery-img" src="${imgSrc(thing)}" alt="${solved ? esc(niceName(thing)) : "A mystery object, zoomed in"}" draggable="false" style="transform:scale(${gameZoom()});transform-origin:${fx}% ${fy}%"></div>
+      <p class="game-feedback mt-4 ${solved ? "win" : ""}" id="game-feedback" aria-live="polite">${solved ? `You got it: ${esc(niceName(thing))}!` : wrong.length ? "Not quite. Look closer and try again!" : "What is it? Pick one."}</p>
+      <div class="guess-options mt-3 grid gap-3">${options.map(o => {
+        const isRight = solved && o === thing, isWrong = wrong.includes(o.img);
+        return `<button type="button" class="guess-opt${isRight ? " right" : ""}${isWrong ? " wrong" : ""}" data-act="guess" data-img="${o.img}"${solved || isWrong ? " disabled" : ""}>${esc(niceName(o))}${isRight ? ICON_CHECK : ""}</button>`;
+      }).join("")}</div>
+      <div class="mt-5 grid gap-3" id="game-after">${solved ? gameAfter() : ""}</div>
+    </section>
+  </main>`;
+}
+
+function guess(b) {
+  if (!game || game.solved) return;
+  const img = document.getElementById("mystery-img"), feedback = document.getElementById("game-feedback");
+  if (b.dataset.img === game.thing.img) {
+    game.solved = true;
+    addStar(); chime("win"); confetti(b);
+    b.classList.add("right"); b.insertAdjacentHTML("beforeend", ICON_CHECK);
+    document.querySelectorAll('.guess-opt[data-act="guess"]').forEach(x => { x.disabled = true; });
+    feedback.textContent = `You got it: ${niceName(game.thing)}!`; feedback.classList.add("win");
+    img.style.transform = "scale(1)"; img.alt = niceName(game.thing);
+    document.getElementById("game-after").innerHTML = gameAfter();
+    speakOnce(`You got it! ${niceName(game.thing)}!`);
+  } else {
+    game.wrong.push(b.dataset.img);
+    chime("oops");
+    b.classList.add("wrong"); b.disabled = true;
+    feedback.textContent = "Not quite. Look closer and try again!";
+    img.style.transform = `scale(${gameZoom()})`;
+  }
+}
+
+function learn(b) {
+  const f = FACTS.find(x => x.img === b.dataset.img);
+  if (!f || isLearned(f)) return;
+  progress.learned.push(f.img); saveProgress();
+  addStar(); chime("win"); confetti(b);
+  b.outerHTML = learnButton(f);
+}
+
+let lastSwipe = 0;
+function pop(el) {
+  if (Date.now() - lastSwipe < 500) return;
+  el.classList.remove("pop"); void el.offsetWidth; el.classList.add("pop");
+  chime("pop");
+  speakOnce(el.dataset.name);
+}
+
+/* ---------- navigation ---------- */
+function render() {
+  stopReading();
+  document.documentElement.style.setProperty("--screen-bg", state.screen === "detail" ? "#F7F6F1" : "#F2EFE7");
+  root.innerHTML = state.screen === "splash" ? splash() : state.screen === "home" ? home() : state.screen === "subjects" ? subjects() : state.screen === "game" ? gameScreen() : detailScreen();
+  window.scrollTo(0, 0);
+  if (state.screen === "detail") preload();
+}
+function go(screen) { backStack.push(state); state = { screen }; render(); }
+function back() { state = backStack.pop() || { screen: "home" }; render(); }
+
+function todayIndex() {
+  const d = new Date(); return Math.floor(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()) / 864e5) % FACTS.length;
+}
+function openRandom() {
+  const today = FACTS[todayIndex()];
+  detail = { list: [today, ...shuffle(FACTS.filter(f => f !== today))], active: 0, from: "home", busy: false };
+  go("detail");
+}
+function openSubject(name) {
+  detail = { list: FACTS.filter(f => f.subject === name), active: 0, from: "subject", busy: false };
+  go("detail");
+}
+function preload() {
+  const { list, active } = detail;
+  [list[(active + 1) % list.length], list[(active - 1 + list.length) % list.length]].forEach(f => { const i = new Image(); i.src = imgSrc(f); });
+}
+
+// Swipe or tap to the next card, with the prototype's slide animation.
+function change(dir) {
+  if (!detail || detail.busy) return;
+  stopReading();
+  const { list, active } = detail;
+  const target = dir === "next" ? (active + 1) % list.length : (active - 1 + list.length) % list.length;
+  const finish = () => { detail.active = target; detail.busy = false; root.innerHTML = detailScreen(); document.querySelector("#detail").classList.remove("screen-enter"); window.scrollTo(0, 0); preload(); };
+  if (reduceMotion()) { finish(); return; }
+  detail.busy = true;
+  window.scrollTo({ top: 0 });
+  const stage = document.getElementById("stage"), cur = document.getElementById("card-current");
+  const counter = document.querySelector(".dt-head .tabular-nums");
+  if (counter) counter.textContent = pad2(target + 1);
+  cur.classList.add(dir === "next" ? "fact-exit-left" : "fact-exit-right");
+  stage.insertAdjacentHTML("beforeend", factCard(list[target], `absolute inset-x-0 top-0 ${dir === "next" ? "fact-enter-right" : "fact-enter-left"}`, "card-incoming"));
+  const inc = document.getElementById("card-incoming");
+  inc.addEventListener("animationend", e => { if (e.target === inc) finish(); }, { once: false });
+}
+
+/* ---------- input ---------- */
+// On touch screens a button acts when the finger lifts. Chrome can swallow the "click" for a tap that lands
+// while a fast swipe is still coasting, and a child would think Back was broken. The click that follows is skipped.
+let tapDown = null, skipClickUntil = 0;
+document.addEventListener("pointerdown", e => {
+  if (e.pointerType !== "touch") return;
+  const el = e.target.closest("[data-act]");
+  tapDown = el ? { el, x: e.clientX, y: e.clientY, t: Date.now() } : null;
+}, true);
+document.addEventListener("pointerup", e => {
+  if (e.pointerType !== "touch" || !tapDown) return;
+  const d = tapDown; tapDown = null;
+  const el = e.target.closest("[data-act]");
+  if (el !== d.el || el.disabled || Math.hypot(e.clientX - d.x, e.clientY - d.y) > 12 || Date.now() - d.t > 800) return;
+  skipClickUntil = Date.now() + 700;
+  activate(el);
+}, true);
+document.addEventListener("pointercancel", () => { tapDown = null; }, true);
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-act]"); if (!b) return;
+  if (Date.now() < skipClickUntil) return;
+  activate(b);
+});
+function activate(b) {
+  if (b.querySelector(".snake") && !reduceMotion()) {
+    if (b.classList.contains("slithering")) return;
+    b.classList.add("slithering");
+    setTimeout(() => { b.classList.remove("slithering"); act(b); }, 300);
+    return;
+  }
+  act(b);
+}
+function act(b) {
+  switch (b.dataset.act) {
+    case "random": openRandom(); break;
+    case "subjects": go("subjects"); break;
+    case "subject": openSubject(b.dataset.name); break;
+    case "back": back(); break;
+    case "next": change("next"); break;
+    case "prev": change("previous"); break;
+    case "listen": reading ? stopReading() : readCard(); break;
+    case "game": newRound(); go("game"); break;
+    case "nav-home": backStack = []; state = { screen: "home" }; render(); break;
+    case "nav-random": backStack = []; state = { screen: "home" }; openRandom(); break;
+    case "nav-subjects": backStack = []; state = { screen: "home" }; go("subjects"); break;
+    case "nav-game": backStack = []; state = { screen: "home" }; newRound(); go("game"); break;
+    case "guess": guess(b); break;
+    case "next-round": newRound(); render(); break;
+    case "learn-about":
+      detail = { list: [game.thing, ...FACTS.filter(f => f.subject === game.thing.subject && f !== game.thing)], active: 0, from: "game", busy: false };
+      go("detail"); break;
+    case "learn": learn(b); break;
+    case "pop": pop(b); break;
+    case "sound":
+      progress.sound = !progress.sound; saveProgress();
+      document.querySelectorAll('[data-act="sound"]').forEach(x => {
+        x.setAttribute("aria-pressed", progress.sound);
+        x.setAttribute("aria-label", progress.sound ? "Turn sounds off" : "Turn sounds on");
+        x.innerHTML = progress.sound ? ICON_SOUND_ON : ICON_SOUND_OFF;
+      });
+      if (progress.sound) chime("pop");
+      break;
+  }
+}
+// Swipe: watch the pointer without capturing it, so Back and the other buttons still get their taps.
+let start = null;
+document.addEventListener("pointerdown", e => { if (state.screen === "detail" && e.isPrimary) start = { x: e.clientX, y: e.clientY }; });
+document.addEventListener("pointerup", e => {
+  if (!start) return;
+  const dx = e.clientX - start.x, dy = e.clientY - start.y; start = null;
+  if (Math.abs(dx) < 55 || Math.abs(dx) < Math.abs(dy) * 1.2) return;
+  lastSwipe = Date.now();
+  change(dx < 0 ? "next" : "previous");
+});
+document.addEventListener("pointercancel", () => { start = null; });
+document.addEventListener("keydown", e => {
+  if (state.screen !== "detail") return;
+  if (e.key === "ArrowRight") change("next");
+  if (e.key === "ArrowLeft") change("previous");
+});
+
+
+render();
+setTimeout(() => { state = { screen: "home" }; render(); }, 1500);
+</script>
+
+</body>
+</html>
